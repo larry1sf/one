@@ -1,0 +1,31 @@
+.logo-container {
+    display: block;
+    width: 140px;
+    user-select: none;
+    background-image: url(../../public/svg/dress.svg);
+    background-position: 115% -5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bg-txt-logo {
+    display: block;
+    text-align: center;
+    width: 70%;
+    height: 70px;
+    font-family: var(--font);
+    font-size: 28px;
+    font-weight: 800;
+    filter: brightness(1.2);
+    background: conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.txt-logo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
