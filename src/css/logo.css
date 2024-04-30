@@ -1,4 +1,5 @@
 .logo-container {
+    justify-self: start;
     display: block;
     width: 140px;
     user-select: none;
@@ -12,7 +13,7 @@
     display: block;
     text-align: center;
     width: 70%;
-    height: 70px;
+    height: var(--h-logo);
     font-family: var(--font);
     font-size: 28px;
     font-weight: 800;

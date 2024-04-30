@@ -67,7 +67,7 @@ function Nav(props) {
         <ul className="navbar-menu">
 
           {props.children}
-          ññ
+
 
         </ul>
 

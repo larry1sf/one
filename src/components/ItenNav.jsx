@@ -17,10 +17,10 @@ export default function ItemNav(props) {
         <li className="navbar-item">
             <Link
                 to={urlProp}
-                className={nameProp}
+                className={"a-item " + nameProp}
                 alt={nameProp}>
 
-                <span>
+                <span className='txt-item'>
                     {nameProp}
                 </span>
             </Link>
