@@ -3,13 +3,19 @@
   src: url(../../public/font/Stay\ Casual.otf);
 }
 
+@font-face {
+  font-family: normal-stay;
+  src: url(../../public/font/Wheel.otf);
+}
+
 :root {
 
   --color: rgba(255, 255, 255, 0.87);
   --bg: #242424;
 
   --h-logo: 70px;
-  --font: title-stay;
+  --f: title-stay;
+  --f-normal: normal-stay;
   /* color-scheme: light dark; */
 
   font-synthesis: none;
