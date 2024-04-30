@@ -19,7 +19,7 @@
 }
 
 .a-item {
-    /* font-family: var(--f-normal); */
+    font-family: var(--f-normal);
     text-align: center;
     height: 40%;
     font-size: 33px;
