@@ -69,6 +69,7 @@ function Nav(props) {
           {props.children}
 
         </ul>
+
       </nav>
 
     </header >
