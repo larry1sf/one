@@ -27,7 +27,7 @@
 .navbar-item .a-item {
     font-family: var(--f-normal);
     text-align: center;
-    height: 30%;
+    height: 50%;
     font-size: calc(var(--bg-size)*.75);
     padding: 0 10px;
     position: relative;
