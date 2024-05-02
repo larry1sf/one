@@ -1,13 +1,17 @@
+:root {
+    --bg-size: 28px;
+}
+
 .navbar-menu {
-    /* height: var(--); */
+    justify-content: center;
     background-color: var(--bg);
     padding: 20px 25px;
-    border-bottom: solid 1px #ffe;
+    border-bottom: solid 2px #ffe;
     box-shadow: 0 0 8px #ffe;
     display: grid;
     grid-template-columns: repeat(5, minmax(10px, 240px));
+    grid-template-rows: repeat(3, 23.3px);
     justify-items: center;
-
 }
 
 .navbar-item {
@@ -15,33 +19,119 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: var(--h-logo);
+    grid-row: 2/4;
 }
 
-.a-item {
+.navbar-item .a-item {
     font-family: var(--f-normal);
     text-align: center;
     height: 30%;
-    font-size: 20px;
+    font-size: calc(var(--bg-size)*.75);
     padding: 0 10px;
     position: relative;
-    color: #FFF
+    color: #FFF;
 }
 
-.a-item:hover .txt-item::before {
+.txt-item::before {
+    content: "";
+    transition: all .3s ease-in-out;
+}
+
+.navbar-item .a-item:hover .txt-item::before {
     position: absolute;
     content: "";
     width: 100%;
     height: 2px;
-    bottom: -5px;
+    bottom: -10px;
     left: 0px;
-    background-color: #ffe;
+    background-color: var(--color-a);
+    transition: all .2s ease-in-out;
 }
 
-/* @media (width<400px) {
-    .navbar-item {
+.navbar-item:nth-child(5) {
+    grid-column: 5;
+}
+
+.NB-top-container {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    grid-area: 1/5;
+    grid-row: 1/2;
+    gap: 10px;
+}
+
+.NB-top-item {
+    /* box-sizing: content-box; */
+    padding: 3px 0;
+    width: 45px;
+    height: 35px;
+    display: flex;
+    background-color: #686868;
+    border-radius: 7px;
+    border: 0.5px solid #000;
+    box-shadow: 0px 0px 2px #ffffff79;
+}
+
+.NB-top-item.msg::before,
+.NB-top-item.bell::before {
+
+    transition: all 3ms ease-in-out;
+}
+
+.NB-top-item.bell::before {
+    content: "";
+    width: 100%;
+    background: url(../../public/svg/bell.svg) 45% no-repeat;
+    background-size: var(--bg-size);
+}
+
+.NB-top-item.msg::before {
+
+    content: "";
+    width: 100%;
+    background: url(../../public/svg/contact.svg) 45% no-repeat;
+    background-size: var(--bg-size);
+
+}
+
+.NB-top-item:hover {
+    cursor: pointer;
+    filter: brightness(1.4);
+    transition: all .1s ease-in-out;
+}
+
+.NB-top-open.open {
+    position: absolute;
+    display: block;
+    width: calc(var(--bg-size)*4);
+    height: calc(var(--bg-size)*4);
+    background: #FFF;
+}
+
+
+
+@media(width < 1250px) {
+    .navbar-menu {
+        grid-template-columns: repeat(4, minmax(10px, 240px));
+    }
+
+    .navbar-item:nth-last-child(2) {
+        display: none;
+    }
+}
+
+
+@media (width<1000px) {
+
+    .navbar-item:nth-last-child(3) {
         display: none;
     }
 
-    tambien tiene que cambiar el tamaño del logo.
-} */
+    .navbar-menu {
+        grid-template-columns: repeat(3, minmax(10px, 240px));
+    }
+
+}

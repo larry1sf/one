@@ -1,17 +1,24 @@
 .logo-container {
-    justify-self: start;
+    grid-row: 1/4;
+    display: flex;
+    min-width: 240px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
     display: block;
-    width: 160px;
+    background: url(/public/svg/dress.svg) 100% 0px no-repeat;
+    background-size: 60px;
     user-select: none;
-    background: url(../../public/svg/dress.svg) 115%;
-    /* background-position: 115%; */
-    background-size: contain;
-    background-repeat: no-repeat;
+    height: 80%;
+    width: 75%;
 }
 
 .bg-txt-logo {
     display: block;
     text-align: center;
+    flex: 1 1 auto;
     width: 80%;
     height: var(--h-logo);
     font-family: var(--f);
@@ -22,11 +29,4 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-
-.txt-logo {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
 }

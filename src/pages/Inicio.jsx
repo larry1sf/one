@@ -17,6 +17,7 @@ import "../css/logo.css";
 import Hombre from "./Hombre";
 import Mujer from "./Mujer";
 import Promociones from "./Promociones";
+import TopItems from "../components/TopItems";
 
 
 
@@ -24,7 +25,8 @@ const navegation = {
   Home: { url: "/", name: "Home" },
   Hombre: { url: "/hombre", name: "Hombre" },
   Mujer: { url: "/mujer", name: "Mujer" },
-  Prom: { url: "/promociones", name: "Promociones" }
+  Prom: { url: "/promociones", name: "Promociones" },
+  Carro: { url: "", name: "Carro" }
 };
 
 
@@ -44,16 +46,21 @@ function Inicio() {
   );
 }
 
+
+
+
+
 // page inicial.
 function Home() {
   return (
     <>
       <Nav>
         <Logo />
-        <ItemNav ob={navegation['Home']}></ItemNav>
-        <ItemNav ob={navegation['Hombre']}></ItemNav>
-        <ItemNav ob={navegation['Mujer']}></ItemNav>
-        <ItemNav ob={navegation['Prom']}></ItemNav>
+        <ItemNav ob={navegation.Home}></ItemNav>
+        <ItemNav ob={navegation.Hombre}></ItemNav>
+        <ItemNav ob={navegation.Mujer}></ItemNav>
+        <ItemNav ob={navegation.Prom}></ItemNav>
+        <TopItems></TopItems>
       </Nav>
     </>
   );

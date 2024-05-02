@@ -7,7 +7,7 @@ export default function Logo() {
         <li className="logo-container">
 
             <a href="" className="img-container">
-                <span className="bg-txt-logo"><p className="txt-logo">Moncada Models</p></span>
+                <span className="bg-txt-logo">Moncada Models</span>
             </a>
 
         </li>
