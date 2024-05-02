@@ -55,4 +55,8 @@
         font-size: 21px;
         height: 100%;
     }
+
+    .txt-item {
+        font-size: 17px;
+    }
 }

@@ -54,7 +54,6 @@
 
 .NB-top-container {
     display: flex;
-    width: 100%;
     justify-content: end;
     align-items: center;
     position: relative;
@@ -134,4 +133,12 @@
         grid-template-columns: repeat(3, minmax(10px, 240px));
     }
 
+}
+
+@media (width <=380px) {
+    .NB-top-item {
+        width: 32px;
+        padding: 0;
+        height: 35px;
+    }
 }
