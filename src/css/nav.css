@@ -2,6 +2,7 @@
     --bg-size: 28px;
 }
 
+/* bg del menu */
 .navbar-menu {
     justify-content: center;
     background-color: var(--bg);
@@ -14,6 +15,7 @@
     justify-items: center;
 }
 
+/* enlaces de navegacion*/
 .navbar-item {
     display: flex;
     align-items: center;
@@ -52,6 +54,8 @@
     grid-column: 5;
 }
 
+/* botones de navegacion */
+
 .NB-top-container {
     display: flex;
     justify-content: end;
@@ -63,7 +67,6 @@
 }
 
 .NB-top-item {
-    /* box-sizing: content-box; */
     padding: 3px 0;
     width: 45px;
     height: 35px;
@@ -111,6 +114,7 @@
 }
 
 
+/* enlaces de navegacion responsive. */
 
 @media(width < 1250px) {
     .navbar-menu {
@@ -121,7 +125,6 @@
         display: none;
     }
 }
-
 
 @media (width<1000px) {
 
@@ -135,10 +138,19 @@
 
 }
 
+
+/* botones de navegacion */
+
+
 @media (width <=380px) {
     .NB-top-item {
-        width: 32px;
         padding: 0;
-        height: 35px;
+        width: 35px;
+        height: 30px;
+    }
+
+    .NB-top-item.msg::before,
+    .NB-top-item.bell::before {
+        background-size: calc(var(--bg-size)*.85);
     }
 }
