@@ -58,7 +58,7 @@
     justify-content: end;
     align-items: center;
     position: relative;
-    grid-area: 1/5;
+    grid-area: 1/3;
     grid-row: 1/2;
     gap: 10px;
 }
