@@ -1,10 +1,10 @@
 .logo-container {
     justify-self: start;
     display: block;
-    width: 140px;
+    width: 160px;
     user-select: none;
-    background-image: url(../../public/svg/dress.svg);
-    background-position: 115% -5px;
+    background: url(../../public/svg/dress.svg) 115%;
+    /* background-position: 115%; */
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -12,7 +12,7 @@
 .bg-txt-logo {
     display: block;
     text-align: center;
-    width: 70%;
+    width: 80%;
     height: var(--h-logo);
     font-family: var(--f);
     font-size: 28px;
@@ -28,5 +28,5 @@
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }

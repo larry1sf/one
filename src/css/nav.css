@@ -5,7 +5,7 @@
     border-bottom: solid 1px #ffe;
     box-shadow: 0 0 8px #ffe;
     display: grid;
-    grid-template-columns: repeat(5, minmax(2px, 1fr));
+    grid-template-columns: repeat(5, minmax(10px, 240px));
     justify-items: center;
 
 }
@@ -13,19 +13,19 @@
 .navbar-item {
     display: flex;
     align-items: center;
-    min-width: 2rem;
-    max-width: 9.5rem;
+    justify-content: center;
+    width: 100%;
     height: var(--h-logo);
 }
 
 .a-item {
     font-family: var(--f-normal);
     text-align: center;
-    height: 40%;
-    font-size: 33px;
-    letter-spacing: 1.5px;
+    height: 30%;
+    font-size: 20px;
     padding: 0 10px;
     position: relative;
+    color: #FFF
 }
 
 .a-item:hover .txt-item::before {
@@ -37,3 +37,11 @@
     left: 0px;
     background-color: #ffe;
 }
+
+/* @media (width<400px) {
+    .navbar-item {
+        display: none;
+    }
+
+    tambien tiene que cambiar el tamaño del logo.
+} */
