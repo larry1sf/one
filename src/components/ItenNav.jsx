@@ -3,10 +3,6 @@ import { Link } from 'wouter';
 
 
 
-// const url = 0;
-// const name = 1;
-
-
 export default function ItemNav(props) {
 
     const nameProp = props.ob.name;

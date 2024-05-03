@@ -34,7 +34,7 @@ function Inicio() {
 
   return (
     <>
-      {/* <Home></Home> */}
+
       <Route path={navegation.Home.url} component={Home} />
 
       <Route path={navegation.Hombre.url} component={Hombre} />
