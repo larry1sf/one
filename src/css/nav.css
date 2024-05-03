@@ -61,9 +61,12 @@
 }
 
 /* botones de navegacion */
+.NB-top-msg-container,
+.NB-top-bell-container {
+    position: relative;
+}
 
 .NB-top-container {
-    position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -73,9 +76,9 @@
     gap: 10px;
 }
 
+/* bg iconos top */
 .NB-top-item.msg,
 .NB-top-item.bell {
-    position: relative;
     padding: 3px 0;
     width: 45px;
     height: 35px;
@@ -86,12 +89,13 @@
     box-shadow: 0px 0px 2px var(--color-a);
 }
 
+/* transitiones... */
 .NB-top-item.msg::before,
 .NB-top-item.bell::before {
     transition: all 3ms ease-in-out;
 }
 
-/* background imagenes */
+/* bg imagenes */
 .NB-top-item.bell::before {
     content: "";
     width: 100%;
@@ -99,7 +103,7 @@
     background-size: var(--bg-size);
 }
 
-/* background imagenes */
+/* bg imagenes */
 .NB-top-item.msg::before {
     content: "";
     width: 100%;
@@ -107,42 +111,31 @@
     background-size: var(--bg-size);
 }
 
+/* hover */
 .NB-top-item:hover {
     cursor: pointer;
     filter: brightness(1.4);
     transition: all .1s ease-in-out;
 }
 
+/* estilos de el btn cerrado */
 .NB-top-open-msg.close,
 .NB-top-open-bell.close {
-    /* position: relative; */
     display: none;
     width: 20px;
     height: 20px;
 }
 
+/* estilos de el btn abierto*/
+
 .NB-top-open-msg.open,
 .NB-top-open-bell.open {
     position: absolute;
-    top: 20px;
+    left: -70%;
     display: block;
     width: calc(var(--bg-size)*4);
     height: calc(var(--bg-size)*4);
     background: var(--color);
-}
-
-.NB-top-open-msg.open {
-    left: 25.5%;
-}
-
-.NB-top-open-bell.open {
-    left: 51.5%;
-}
-
-.NB-top-open.open .btn-bell-close {
-    display: block;
-    height: 50px;
-    width: 100px;
 }
 
 /* enlaces de navegacion responsive. */

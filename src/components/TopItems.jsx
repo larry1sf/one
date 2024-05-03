@@ -4,7 +4,7 @@ export default function TopItems() {
     return (
         <li className="NB-top-container">
             <Item cname='msg' />
-            {/* <Item cname='bell' /> */}
+            <Item cname='bell' />
         </li>
     );
 }
@@ -18,9 +18,13 @@ function Item(props) {
 
     return (
 
-        <div
-            className={`NB-top-item ${props.cname}`}
-            onClick={() => setOpen(!open)}>
+        <div className={`NB-top-${props.cname}-container`}>
+            <div
+                className={`NB-top-item ${props.cname}`}
+                onClick={() => setOpen(!open)}>
+
+
+            </div >
 
             <div
                 className={`NB-top-open-${props.cname} ${CNopen}`} >
@@ -28,14 +32,13 @@ function Item(props) {
                 <button
                     type="button"
                     className="btn-bell-close"
-                    onClick={() => setOpen(!open)}
+                    onClick={() => setOpen(false)}
                 >
 
                     salir ❌
                 </button>
 
             </div >
-        </div >
-
+        </div>
     );
 }
