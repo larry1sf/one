@@ -1,13 +1,11 @@
-//library wouter
+//librarys
 import { Route } from "wouter";
 
 
-// componentes
-// import Home from "./Home";
 
+// componentes
 import Logo from "../components/Logo";
 import ItemNav from "../components/ItenNav";
-
 
 // css.
 import "../css/nav.css";
@@ -18,9 +16,11 @@ import Hombre from "./Hombre";
 import Mujer from "./Mujer";
 import Promociones from "./Promociones";
 import TopItems from "../components/TopItems";
+import BloqueImg from "../components/BloqueImg";
 
 
 
+// items
 const navegation = {
   Home: { url: "/", name: "Home" },
   Hombre: { url: "/hombre", name: "Hombre" },
@@ -52,16 +52,24 @@ function Inicio() {
 
 // page inicial.
 function Home() {
+
+
   return (
     <>
       <Nav>
         <Logo />
-        <ItemNav ob={navegation.Home}></ItemNav>
-        <ItemNav ob={navegation.Hombre}></ItemNav>
-        <ItemNav ob={navegation.Mujer}></ItemNav>
-        <ItemNav ob={navegation.Prom}></ItemNav>
+        <ItemNav
+          ob={navegation.Home} />
+        <ItemNav
+          ob={navegation.Hombre} />
+        <ItemNav
+          ob={navegation.Mujer} />
+        <ItemNav
+          ob={navegation.Prom} />
+        <ItemNav ob={navegation.Carro} />
         <TopItems></TopItems>
       </Nav>
+      <BloqueImg />
     </>
   );
 }

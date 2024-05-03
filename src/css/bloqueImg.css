@@ -1,0 +1,11 @@
+.bloque-img-container {
+    display: inline-block;
+    width: 100%;
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+
+.img-fondo {
+    display: inline-block;
+    width: 100%;
+}

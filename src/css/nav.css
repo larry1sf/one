@@ -27,9 +27,9 @@
 /* items a de la navegacion */
 .navbar-item .a-item {
     font-family: var(--f-normal);
+    font-size: calc(var(--bg-size)*.7);
     text-align: center;
     height: 50%;
-    font-size: calc(var(--bg-size)*.75);
     padding: 0 10px;
     position: relative;
     color: var(--color);
@@ -46,12 +46,13 @@
     color: var(--color-a);
 }
 
-.navbar-item .a-item:hover .txt-item::before {
+.navbar-item .a-item:hover .txt-item::before,
+.navbar-item .a-item.Home.active .txt-item::before {
     position: absolute;
     content: "";
     width: 100%;
-    height: 2px;
-    bottom: 0px;
+    height: 3px;
+    bottom: -1px;
     left: 0px;
     background-color: var(--color-a);
     transition: all .2s ease-in-out;
