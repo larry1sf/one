@@ -3,19 +3,30 @@
 // componentes
 import Logo from "../components/Logo";
 import ItemNav from "../components/ItenNav";
+import TopItems from "../components/TopItems";
+import BloqueImg from "../components/BloqueImg";
+import { navegation } from "../service/itemsNavegacon";
+
+// inicial.
+function Home() {
 
 
-
-function Home(props) {
     return (
         <>
             <Nav>
                 <Logo />
-                <ItemNav ob={props.Home}></ItemNav>
-                <ItemNav ob={props.Hombre}></ItemNav>
-                <ItemNav ob={props.Mujer}></ItemNav>
-                <ItemNav ob={props.Promo}></ItemNav>
+                <ItemNav
+                    ob={navegation.Home} />
+                <ItemNav
+                    ob={navegation.Hombre} />
+                <ItemNav
+                    ob={navegation.Mujer} />
+                <ItemNav
+                    ob={navegation.Prom} />
+                <ItemNav ob={navegation.Carro} />
+                <TopItems></TopItems>
             </Nav>
+            <BloqueImg />
         </>
     );
 }
@@ -29,11 +40,15 @@ function Nav(props) {
 
                     {props.children}
 
+
                 </ul>
+
             </nav>
 
         </header >
     );
 }
+
+
 
 export default Home;
