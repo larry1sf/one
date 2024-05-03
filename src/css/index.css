@@ -15,7 +15,7 @@
 :root {
 
   --color: rgb(255, 255, 255);
-  --color-a: rgba(255, 253, 241, 0.89);
+  --color-a: rgba(214, 214, 210, 0.87);
   --bg: #242424;
 
   --h-logo: 70px;
@@ -32,7 +32,7 @@
 
 
 a {
-  color: #fff;
+  color: var(--color);
   text-decoration: inherit;
 }
 

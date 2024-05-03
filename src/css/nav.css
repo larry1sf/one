@@ -31,7 +31,13 @@
     font-size: calc(var(--bg-size)*.75);
     padding: 0 10px;
     position: relative;
-    color: #FFF;
+    color: var(--color);
+}
+
+
+
+.navbar-item .a-item:hover .txt-item {
+    color: var(--color-a);
 }
 
 .txt-item::before {
@@ -44,7 +50,7 @@
     content: "";
     width: 100%;
     height: 2px;
-    bottom: -10px;
+    bottom: 0px;
     left: 0px;
     background-color: var(--color-a);
     transition: all .2s ease-in-out;
@@ -57,32 +63,35 @@
 /* botones de navegacion */
 
 .NB-top-container {
-    display: flex;
-    justify-content: end;
-    align-items: center;
     position: relative;
-    grid-area: 1/3;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-column: 4/6;
     grid-row: 1/2;
     gap: 10px;
 }
 
-.NB-top-item {
+.NB-top-item.msg,
+.NB-top-item.bell {
+    position: relative;
     padding: 3px 0;
     width: 45px;
     height: 35px;
     display: flex;
-    background-color: #686868;
+    background-color: var(--color-a);
     border-radius: 7px;
-    border: 0.5px solid #000;
-    box-shadow: 0px 0px 2px #ffffff79;
+    border: 0.5px solid #000000a6;
+    box-shadow: 0px 0px 2px var(--color-a);
 }
 
 .NB-top-item.msg::before,
 .NB-top-item.bell::before {
-
     transition: all 3ms ease-in-out;
 }
 
+/* background imagenes */
 .NB-top-item.bell::before {
     content: "";
     width: 100%;
@@ -90,13 +99,12 @@
     background-size: var(--bg-size);
 }
 
+/* background imagenes */
 .NB-top-item.msg::before {
-
     content: "";
     width: 100%;
     background: url(../../public/svg/contact.svg) 45% no-repeat;
     background-size: var(--bg-size);
-
 }
 
 .NB-top-item:hover {
@@ -105,14 +113,37 @@
     transition: all .1s ease-in-out;
 }
 
-.NB-top-open.open {
+.NB-top-open-msg.close,
+.NB-top-open-bell.close {
+    /* position: relative; */
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+.NB-top-open-msg.open,
+.NB-top-open-bell.open {
     position: absolute;
+    top: 20px;
     display: block;
     width: calc(var(--bg-size)*4);
     height: calc(var(--bg-size)*4);
-    background: #FFF;
+    background: var(--color);
 }
 
+.NB-top-open-msg.open {
+    left: 25.5%;
+}
+
+.NB-top-open-bell.open {
+    left: 51.5%;
+}
+
+.NB-top-open.open .btn-bell-close {
+    display: block;
+    height: 50px;
+    width: 100px;
+}
 
 /* enlaces de navegacion responsive. */
 
@@ -143,6 +174,10 @@
 
 
 @media (width <=380px) {
+    .NB-top-container {
+        grid-area: 1/3;
+    }
+
     .NB-top-item {
         padding: 0;
         width: 35px;
