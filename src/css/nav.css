@@ -6,12 +6,12 @@
 .navbar-menu {
     justify-content: center;
     background-color: var(--bg);
-    padding: 20px 25px;
+    padding: 10px 25px;
     border-bottom: solid 2px #ffe;
     box-shadow: 0 0 8px #ffe;
     display: grid;
     grid-template-columns: repeat(5, minmax(10px, 240px));
-    grid-template-rows: repeat(3, 23.3px);
+    grid-template-rows: 40px repeat(2, 23.3px);
     justify-items: center;
 }
 
