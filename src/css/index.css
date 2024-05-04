@@ -11,16 +11,16 @@
 }
 
 
-
 :root {
 
-  --color: rgb(255, 255, 255);
-  --color-a: rgba(214, 214, 210, 0.87);
-  --bg: #242424;
+  --color-a: #263159;
+  --color: #495579;
+  --bg: #FFFBEB;
 
   --h-logo: 70px;
   --f: title-stay;
   --f-normal: normal-stay;
+  --border: 0.5px solid #000000a6;
   /* color-scheme: light dark; */
 
   font-synthesis: none;

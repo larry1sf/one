@@ -7,31 +7,35 @@
 }
 
 .img-container {
-    display: block;
-    background: url(/public/svg/dress.svg) 100% 0px no-repeat;
+    display: flex;
+    align-items: center;
+    background: url(/public/svg/dress.svg) 107% 0px no-repeat;
     background-size: 60px;
-    user-select: none;
-    height: 80%;
+    height: 65%;
     width: 75%;
+    user-select: none;
 }
 
-.bg-txt-logo {
-    display: block;
+.bg-txt {
+    height: 100%;
+    width: 100%;
+}
+
+.logo-txt {
+    width: 130px;
+    height: 100%;
+    font-size: 1.9rem;
     text-align: center;
-    flex: 1 1 auto;
-    width: 80%;
-    height: var(--h-logo);
+    text-wrap: pretty;
+    color: var(--color-a);
     font-family: var(--f);
-    font-size: 28px;
-    font-weight: 800;
-    filter: brightness(1.2);
-    background: conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
-@media (width <=380px) {
+
+
+
+
+@media (width <=480px) {
     .navbar-menu {
         grid-template-columns: 120px repeat(2, minmax(10px, 140px));
     }

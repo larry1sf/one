@@ -12,22 +12,23 @@ export default function ItemNav(props) {
 
     const [active, SetActive] = useState(false);
 
-    const verifyActive = active ? 'active' : '';
+    const verifyActive = active ? 'active' : 'desactive';
 
     return (
 
-        <li className="navbar-item"
-            onClick={() => SetActive(true)}
-        >
+        <li className="navbar-item">
             <Link
                 to={urlProp}
                 className={`a-item ${nameProp} ${verifyActive}`}
-                alt={nameProp}>
+                alt={nameProp}
+                onClick={() => SetActive(!active)}>
 
-                <span className='txt-item'>
+                <span
+                    className='txt-item'
+                    onClick={props.selec}>
                     {nameProp}
                 </span>
             </Link>
-        </li>
+        </li >
     );
 }

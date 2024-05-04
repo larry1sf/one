@@ -3,5 +3,5 @@ export const navegation = {
     Hombre: { url: "/hombre", name: "Hombre" },
     Mujer: { url: "/mujer", name: "Mujer" },
     Prom: { url: "/promociones", name: "Promociones" },
-    Carro: { url: "", name: "Carro" }
+    Carro: { url: "/", name: "Carro" }
 };

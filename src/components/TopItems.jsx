@@ -31,14 +31,20 @@ function Item(props) {
 
                 <button
                     type="button"
-                    className="btn-bell-close"
+                    className={`btn-${props.cname}-close`}
                     onClick={() => setOpen(false)}
                 >
 
-                    salir ❌
+                    ❌
                 </button>
 
             </div >
         </div>
     );
+}
+
+
+
+function msg() {
+    return;
 }
