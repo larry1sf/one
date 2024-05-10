@@ -34,9 +34,7 @@
 
 
 @media (width <=480px) {
-    .navbar-menu {
-        grid-template-columns: 120px repeat(2, minmax(10px, 140px));
-    }
+
 
     .logo-container {
         min-width: 100%;

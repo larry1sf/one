@@ -6,9 +6,9 @@ import "../css/nav.css";
 import "../css/logo.css";
 
 
-
-
 function Inicio() {
+
+
   return (
     <>
       <Home></Home>
