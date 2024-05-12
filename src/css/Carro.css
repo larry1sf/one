@@ -1,0 +1,25 @@
+.a-item.Carro {
+    /* position: absolute; */
+}
+
+.a-item-carro {
+    position: absolute;
+    display: flex;
+    height: 10rem;
+    right: 1px;
+    bottom: 0;
+    background-color: #ccd;
+    /* animation: .4s ease-in both carSlide; */
+}
+
+/* 
+@keyframes carSlide {
+
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 400px;
+    }
+} */

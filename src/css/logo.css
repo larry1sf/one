@@ -1,18 +1,19 @@
 .logo-container {
     grid-row: 1/4;
     display: flex;
-    min-width: 240px;
+    min-width: 100%;
+    height: auto;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 
 .img-container {
     display: flex;
     align-items: center;
-    background: url(/public/svg/dress.svg) 107% 0px no-repeat;
+    background: url(/public/svg/dress.svg) 105% 0px no-repeat;
     background-size: 60px;
-    height: 65%;
-    width: 75%;
+    height: 75%;
+    width: 80%;
     user-select: none;
 }
 
@@ -20,20 +21,18 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    /* width: 130px; */
+    width: 70%;
     height: 100%;
-    font-size: 1.9rem;
     text-align: center;
     text-wrap: pretty;
-    color: var(--color-a);
     font-family: var(--f);
+    font-size: 1.6rem;
+    color: var(--color-a);
 }
 
+/* media querys */
 
-
-
-
-@media (width <=480px) {
+@media (width <=580px) {
 
 
     .logo-container {

@@ -1,6 +1,5 @@
 // library
 import { Link } from 'wouter';
-import { useState } from "react";
 
 
 // hooks
@@ -9,12 +8,14 @@ export default function ItemNav(props) {
     const urlProp = props.ob.url;
     const aClick = props.Aactive;
     const aName = props.Averificar;
-    let nameMostrar = '';
+    let nameMostrar = 'a';
 
 
     if (aName === 'Hombre' & nameProp === aName) nameMostrar = 'on';
-    if (aName === 'Mujer' & nameProp === aName) nameMostrar = 'on';
-    if (aName === 'Promociones' & nameProp === aName) nameMostrar = 'on';
+    else if (aName === 'Home' & nameProp === aName) nameMostrar = 'on';
+    else if (aName === 'Mujer' & nameProp === aName) nameMostrar = 'on';
+    else if (aName === 'Promociones' & nameProp === aName) nameMostrar = 'on';
+    else nameMostrar = '';
 
 
     return (

@@ -4,22 +4,11 @@ import ItemNav from "../components/ItenNav";
 import TopItems from "../components/TopItems";
 import { useState } from "react";
 import { navegation } from "../service/itemsNavegacon";
+import CarroBtn from "./Carro";
 
 export default function Nav() {
 
-    // const verifyActive = active ? 'active' : 'desactive';
-
-    // const Vinferior = selected ? <Rutas /> : <BloqueImg></BloqueImg>;
-
-    // const veri = `${selected}`;
-
-
-
-
-    const [active, setActive] = useState('');
-
-
-    console.log(active);
+    const [active, setActive] = useState('Home');
 
     return (
         <header>
@@ -30,6 +19,8 @@ export default function Nav() {
 
                     <ItemNav
                         ob={navegation.Home}
+                        Averificar={active}
+                        Aactive={() => setActive(navegation.Home.name)}
                     />
                     <ItemNav
                         ob={navegation.Hombre}
@@ -47,7 +38,7 @@ export default function Nav() {
                         Aactive={() => setActive(navegation.Prom.name)}
                     />
 
-                    <ItemNav
+                    <CarroBtn
                         ob={navegation.Carro}
                     />
 

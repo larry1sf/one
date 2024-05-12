@@ -5,6 +5,8 @@ import { navegation } from "../../service/itemsNavegacon";
 
 
 export default function ViewSmall(props) {
+    const ViewInferior = props.Vinferior;
+    const espaciado = { name: '. . .', url: '/' };
 
     return (
         <>
@@ -14,7 +16,7 @@ export default function ViewSmall(props) {
                 <ItemNav
                     ob={navegation.Home} />
 
-                <ItemNav ob={{ name: '. . .', url: '/' }} />
+                <ItemNav ob={espaciado} />
 
                 <ItemNav
                     ob={navegation.Carro} />
@@ -23,7 +25,7 @@ export default function ViewSmall(props) {
 
             </Nav>
 
-            {props.Vinferior}
+            {ViewInferior}
 
         </>
     );
