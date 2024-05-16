@@ -1,25 +1,64 @@
-.a-item.Carro {
-    /* position: absolute; */
-}
-
-.a-item-carro {
+.subContenedor {
+    z-index: 20;
     position: absolute;
-    display: flex;
-    height: 10rem;
-    right: 1px;
-    bottom: 0;
-    background-color: #ccd;
-    /* animation: .4s ease-in both carSlide; */
+    right: 0pc;
+    top: 0pc;
+    display: block;
+    width: 300px;
+    height: 100vh;
+    transition: height 0s, all .4s ease;
 }
 
-/* 
-@keyframes carSlide {
+#ch {
+    display: none;
 
-    0% {
-        width: 0%;
+    &:not(:checked)~.subContenedor {
+        width: 0;
+        padding: 0;
+        height: 100vh;
     }
+}
 
-    100% {
-        width: 400px;
+.carrito {
+    min-height: 100%;
+    padding: 5px;
+    text-wrap: nowrap;
+    background-color: var(--color);
+    color: var(--bg);
+}
+
+.btn-close-carro {
+    /* background-color: var(--bg); */
+    width: 100%;
+}
+
+.lb-close {
+    display: inline-block;
+    width: auto;
+}
+
+.encabezado-car {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
+.cuerpo-car {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(2) {
+        border-top: 1px solid #ccc;
     }
-} */
+}
+
+.footer-car {
+    display: flex;
+    gap: 4px;
+
+    button {
+        flex: 1 1 auto;
+    }
+}

@@ -3,28 +3,34 @@ import VCarro from "./VCarro";
 export default function CarroBtn(prop) {
     const nameProp = prop.ob.name;
 
-    const [Copen, setCopen] = useState(false);
 
 
-
+    // function clickCar() {
+    //     setCopen(!Copen);
+    // }
 
 
     return (
         <>
             <li className="navbar-item">
-
+                <input type="checkbox" id="ch" />
                 <div
                     className={`a-item ${nameProp}`}
                     alt={nameProp}
-                    onClick={() => setCopen(!Copen)}>
-                    <span
-                        className='txt-item'
-                    >
-                        {nameProp}
-                    </span>
+                >
+
+                    <label htmlFor="ch" >
+
+                        <span
+                            className='txt-item'
+                        // onClick={clickCar}
+                        >
+                            {nameProp}
+                        </span>
+                    </label>
                 </div>
 
-                <VCarro nam={Copen ? 'car focus' : 'car '} />
+                <VCarro />
             </li ></>
     );
 }
