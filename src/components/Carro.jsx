@@ -1,4 +1,3 @@
-import { useState } from "react";
 import VCarro from "./VCarro";
 export default function CarroBtn(prop) {
     const nameProp = prop.ob.name;

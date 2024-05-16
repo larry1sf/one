@@ -2,6 +2,7 @@ import Logo from "../../components/Logo";
 import ItemNav from "../../components/ItenNav";
 import TopItems from "../../components/TopItems";
 import { navegation } from "../../service/itemsNavegacon";
+import CarroBtn from "../../components/Carro";
 
 
 export default function ViewSmall(props) {
@@ -18,7 +19,7 @@ export default function ViewSmall(props) {
 
                 <ItemNav ob={espaciado} />
 
-                <ItemNav
+                <CarroBtn
                     ob={navegation.Carro} />
 
                 <TopItems></TopItems>
