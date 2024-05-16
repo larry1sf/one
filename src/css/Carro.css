@@ -20,14 +20,10 @@
 
     &:not(:checked)~.subContenedor .carrito {
         padding: 0;
-    }
-
-    &:not(:checked)~.subContenedor .carrito .encabezado-car,
-    &:not(:checked)~.subContenedor .carrito .cuerpo-car,
-    &:not(:checked)~.subContenedor .carrito .footer-car {
-
         display: none;
     }
+
+   
 }
 
 .carrito {
