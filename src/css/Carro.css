@@ -14,8 +14,12 @@
 
     &:not(:checked)~.subContenedor {
         width: 0;
-        padding: 0;
         height: 100vh;
+    }
+
+    &:not(:checked)~.subContenedor .carrito {
+        padding: 0;
+
     }
 }
 
