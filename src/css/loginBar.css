@@ -1,0 +1,29 @@
+.login-container {
+    height: 30px;
+    background-color: var(--color);
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    align-items: center;
+    color: var(--bg);
+}
+
+.login-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 13.5px;
+    color: var(--bg);
+}
+
+.I {
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 17px;
+        background: url('../../public/svg/person.svg') no-repeat 0px -1.5px;
+        background-size: 15px;
+
+    }
+}

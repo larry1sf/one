@@ -11,7 +11,7 @@ export default function Nav() {
     const [active, setActive] = useState('Home');
 
     return (
-        <header>
+        <div>
             <nav className="navbar">
                 <ul className="navbar-menu">
 
@@ -48,6 +48,6 @@ export default function Nav() {
 
             </nav>
 
-        </header >
+        </div >
     );
 }

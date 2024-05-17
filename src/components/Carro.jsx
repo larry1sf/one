@@ -18,7 +18,7 @@ export default function CarroBtn(prop) {
                     alt={nameProp}
                 >
 
-                    <label htmlFor="ch" >
+                    <label htmlFor="ch" className="chh">
 
                         <span
                             className='txt-item'

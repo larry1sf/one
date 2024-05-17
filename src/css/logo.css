@@ -14,6 +14,7 @@
     background-size: 60px;
     height: 75%;
     width: 80%;
+    -webkit-user-select: none;
     user-select: none;
 }
 
