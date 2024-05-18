@@ -5,15 +5,27 @@ export default function TopItems() {
 
     return (
         <li className="NB-top-container-tops">
-            <Item cname='msg' />
-            <Item cname='bell' />
+            <Item cname='msg' >
+                <Whatsapp />
+                Facebook: https://www.messenger.com/e2ee/t/7475012539220990
+                direccion: cr19#39-29
+
+            </Item>
+            <Item cname='bell' > Notice</Item>
         </li>
     );
 }
 
+function Whatsapp() {
+    return (
+        <>
+            whatsapp: #3333333
+        </>
+    );
 
-function Item(props) {
-    const cname = props.cname;
+}
+function Item({ cname, children }) {
+    // const cname = props.cname;
     const [open, setOpen] = useState(false);
 
 
@@ -39,6 +51,7 @@ function Item(props) {
                 >
                     ❌
                 </button>
+                {children}
 
             </div >
         </div>

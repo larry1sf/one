@@ -1,9 +1,9 @@
-
-import Logo from "../components/Logo";
-import ItemNav from "../components/ItenNav";
-import TopItems from "../components/TopItems";
-import { useState } from "react";
 import { navegation } from "../service/itemsNavegacon";
+import { useState } from "react";
+
+import Logo from "./Logo";
+import ItemNav from "./ItenNav";
+import TopItems from "./TopItems";
 import CarroBtn from "./Carro";
 import Busqueda from "./Busqueda";
 
@@ -11,8 +11,9 @@ export default function Nav() {
 
     const [active, setActive] = useState('Home');
 
+
     return (
-        <div>
+        <section className="conte-nav">
             <nav className="navbar">
                 <ul className="navbar-menu">
 
@@ -21,34 +22,32 @@ export default function Nav() {
                     <ItemNav
                         ob={navegation.Home}
                         Averificar={active}
-                        Aactive={() => setActive(navegation.Home.name)}
+                        Aactive={i => setActive(i = navegation.Home.name, i)}
                     />
                     <ItemNav
                         ob={navegation.Hombre}
                         Averificar={active}
-                        Aactive={() => setActive(navegation.Hombre.name)}
+                        Aactive={i => setActive(i = navegation.Hombre.name, i)}
                     />
                     <ItemNav
                         ob={navegation.Mujer}
                         Averificar={active}
-                        Aactive={() => setActive(navegation.Mujer.name)}
+                        Aactive={i => setActive(i = navegation.Mujer.name, i)}
                     />
                     <ItemNav
                         ob={navegation.Prom}
                         Averificar={active}
-                        Aactive={() => setActive(navegation.Prom.name)}
+                        Aactive={i => setActive(i = navegation.Prom.name, i)}
                     />
-
                     <CarroBtn
                         ob={navegation.Carro}
                     />
-
                     <TopItems></TopItems>
 
                 </ul>
 
             </nav>
 
-        </div >
+        </ section>
     );
 }

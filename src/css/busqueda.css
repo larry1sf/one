@@ -6,7 +6,8 @@
 }
 
 form {
-    height: 70%;
+    box-sizing: content-box;
+    height: 100%;
     width: 50%;
 }
 
@@ -16,8 +17,9 @@ form {
     display: flex;
     align-items: center;
     border: 1px solid var(--color);
-    border-radius: 13px 13px;
-    padding: 0 10px;
+    border-radius: 20px 20px;
+    padding: 10px 15px;
+
 }
 
 .i-txt {
@@ -47,8 +49,8 @@ form {
     display: inline-block;
     width: 12%;
     height: 100%;
-    background: url(../../public/svg/lupa.png) no-repeat 3px 3px;
-    background-size: 80% 75%;
+    background: url(../../public/svg/lupa.png) no-repeat 0px 1px;
+    background-size: 70% 75%;
     border: 0;
 
     &:hover {

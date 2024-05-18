@@ -12,7 +12,10 @@ export default function LoginBar() {
 
     function Items({ text }) {
         return (
-            <a href={`/${text}`} className={`login-items ${text[0]}`}>
+            <a
+                title={text}
+                href={`/${text}`}
+                className={`login-items ${text[0]}`}>
                 {text}
             </a>
         );
