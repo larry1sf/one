@@ -5,6 +5,7 @@ import TopItems from "../components/TopItems";
 import { useState } from "react";
 import { navegation } from "../service/itemsNavegacon";
 import CarroBtn from "./Carro";
+import Busqueda from "./Busqueda";
 
 export default function Nav() {
 
@@ -16,7 +17,7 @@ export default function Nav() {
                 <ul className="navbar-menu">
 
                     <Logo />
-
+                    <Busqueda />
                     <ItemNav
                         ob={navegation.Home}
                         Averificar={active}

@@ -1,14 +1,3 @@
-.subContenedor {
-    z-index: 20;
-    position: absolute;
-    right: 0pc;
-    top: 0pc;
-    display: block;
-    width: 300px;
-    height: 100vh;
-    transition: height 0s, all .4s ease;
-}
-
 #ch {
     display: none;
 
@@ -27,7 +16,59 @@
 .chh {
     height: 100%;
     width: 100%;
-    border-radius: 50%;
+    border-radius: 40%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* items a de la navegacion carro */
+.navbar-item .a-item.🛒 {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+    background: url(../../public/svg/cart.svg) no-repeat 30% 50%;
+    background-size: 50% 80%;
+    align-items: center;
+    font-family: 'san-sherif';
+    transform: rotateY(0deg);
+
+    &:hover::before {
+        content: "(0)";
+    }
+
+    &::before {
+        content: "(0)";
+        position: absolute;
+        display: block;
+        height: 15px;
+        right: 5px;
+        transform: rotateY(180deg);
+        z-index: -1;
+    }
+}
+
+/* quita el on de la navegation. */
+.navbar-item .a-item.🛒:hover::after {
+    content: "";
+    visibility: hidden;
+}
+
+
+
+
+
+.subContenedor {
+    z-index: 20;
+    position: absolute;
+    right: 0pc;
+    top: 0pc;
+    display: block;
+    width: 300px;
+    height: 100vh;
+    transition: height 0s, all .4s ease;
 }
 
 .carrito {

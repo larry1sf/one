@@ -24,7 +24,7 @@ export default function CarroBtn(prop) {
                             className='txt-item'
                         // onClick={clickCar}
                         >
-                            {nameProp}
+
                         </span>
                     </label>
                 </div>

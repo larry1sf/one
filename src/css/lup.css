@@ -1,0 +1,57 @@
+.navbar-item.busqueda {
+    grid-row: 1/2;
+    grid-column: 2/4;
+    height: 100%;
+    width: 100%;
+}
+
+form {
+    height: 70%;
+    width: 50%;
+}
+
+.lb-busqueda {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color);
+    border-radius: 13px 13px;
+    padding: 0 10px;
+}
+
+.i-txt {
+    height: 100%;
+    width: 88%;
+    background-color: transparent;
+    border: 0;
+    font-family: var(--f-normal);
+    letter-spacing: .6px;
+
+    &::selection,
+    &:focus,
+    &:active {
+
+        outline: 0;
+    }
+
+    &::placeholder {
+        color: var(--color-a);
+        font-size: 14.5px;
+    }
+}
+
+
+
+.btn-label-txt {
+    display: inline-block;
+    width: 12%;
+    height: 100%;
+    background: url(../../public/svg/lupa.png) no-repeat 3px 3px;
+    background-size: 80% 75%;
+    border: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
