@@ -19,7 +19,11 @@ export default function TopItems() {
 function Whatsapp() {
     return (
         <>
-            whatsapp: #3333333
+            <figure>
+                <img src="../../public/svg/lupa.png" alt="Whatsapp-Empresa" />
+                <figcaption>Whatsapp-Empresa</figcaption>
+            </figure>
+
         </>
     );
 

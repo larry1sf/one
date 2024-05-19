@@ -49,8 +49,8 @@ form {
     display: inline-block;
     width: 12%;
     height: 100%;
-    background: url(../../public/svg/lupa.png) no-repeat 0px 1px;
-    background-size: 70% 75%;
+    background: url(../../public/svg/lupa.png) no-repeat;
+    background-size: 80% 95%;
     border: 0;
 
     &:hover {

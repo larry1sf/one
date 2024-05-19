@@ -8,13 +8,16 @@ export default function VCarro() {
             <div className={`a-item-carro carrito`}>
 
                 <div className="encabezado-car">
+
                     <h4>Carrito 🛒</h4>
 
                     <label htmlFor="ch" className="lb-close">
-                        <i type="button"
-                            className="btn-close-carro"
-                        >❌</i>
+                        <pre
+                            className="btn-close-carro">
+                            ❌
+                        </pre>
                     </label>
+
                 </div>
 
                 <div className="cuerpo-car">
@@ -25,8 +28,14 @@ export default function VCarro() {
                     <div>cards</div>
                 </div>
                 <div className="footer-car">
-                    <button type="button">Comprar ahora</button>
-                    <button type="button"> Comprar despues.</button>
+                    <button
+                        type="button">
+                        Comprar ahora
+                    </button>
+                    <button
+                        type="button">
+                        Comprar despues.
+                    </button>
                 </div>
 
             </div>
