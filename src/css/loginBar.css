@@ -3,8 +3,9 @@
     background-color: var(--color);
     display: flex;
     justify-content: end;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
+    padding: 5px;
     color: var(--bg);
 }
 
@@ -14,6 +15,7 @@
     align-items: center;
     font-size: 13.5px;
     color: var(--bg);
+
 }
 
 .I {
@@ -24,6 +26,19 @@
         height: 17px;
         background: url('../../public/svg/person.svg') no-repeat 0px -1.5px;
         background-size: 15px;
+    }
+
+    &:hover {
+        color: var(--color-a);
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 17px;
+            background: url('../../public/svg/person-acent.svg') no-repeat 0px -1.5px;
+            background-size: 15px;
+        }
 
     }
 }
