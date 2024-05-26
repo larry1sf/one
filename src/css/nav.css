@@ -6,7 +6,7 @@
 .navbar-menu {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(6, minmax(10px, 240px));
+    grid-template-columns: 240px repeat(5, minmax(10px, 240px));
     grid-template-rows: 40px repeat(2, 35px);
     padding: 10px 25px;
     /* box-shadow: 0 10px 58px rgb(0, 0, 0); */
@@ -160,34 +160,17 @@
 
 /* enlaces de navegacion responsive. */
 
-@media(width < 1150px) {
+@media(width <=1150px) {
     .navbar-menu {
-        grid-template-columns: 240px repeat(5, minmax(10px, 240px));
+        grid-template-columns: 200px repeat(5, minmax(10px, 240px));
     }
 
-    .navbar-item {
+    /* .navbar-item {
         &:nth-last-child(3) {
-            /* display: none; */
         }
-    }
+    } */
 }
 
-@media (width<1000px) {
-
-    .navbar-item {
-        &:nth-last-child(4) {}
-
-        &:nth-last-child(5)::after {
-            background: aqua;
-            content: "...";
-        }
-    }
-
-    .navbar-menu {
-        grid-template-columns: 200px repeat(4, minmax(10px, 140px));
-    }
-
-}
 
 
 /*posicion botones de navegacion */

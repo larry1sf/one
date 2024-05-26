@@ -10,10 +10,10 @@
 .img-container {
     display: flex;
     align-items: center;
-    background: url(/public/svg/dress.svg) 100% 10px no-repeat;
+    background: url(/public/svg/dress.svg) 85% 45% no-repeat;
     background-size: 60px;
     height: 75%;
-    width: 80%;
+    width: 100%;
     -webkit-user-select: none;
     user-select: none;
 }

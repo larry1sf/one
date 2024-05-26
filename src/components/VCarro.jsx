@@ -9,9 +9,9 @@ export default function VCarro() {
 
                 <div className="encabezado-car">
 
-                    <h4>Carrito 🛒</h4>
+                    <h4 className="encabezado-car title">Carrito 🛒</h4>
 
-                    <label htmlFor="ch" className="lb-close">
+                    <label htmlFor="ch" className="encabezado-car lb-close">
                         <pre
                             className="btn-close-carro">
                             ❌
@@ -22,7 +22,6 @@ export default function VCarro() {
 
                 <div className="cuerpo-car">
                     <p>Aqui se mostraran las comprar seleccionadas.</p>
-                    <br />
                     <div>cards</div>
                     <div>cards</div>
                     <div>cards</div>

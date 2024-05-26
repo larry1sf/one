@@ -14,7 +14,7 @@ export default function Busqueda() {
                         className="i-txt"
                         type="search"
                         autoComplete="off"
-                        name="b"
+                        name="busqueda"
                         placeholder="¿Que estas buscando?"
                         id="i-txt" />
                     <button
