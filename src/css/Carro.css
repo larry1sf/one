@@ -54,9 +54,10 @@
 
 .carro-abrir {
     position: absolute;
-    width: 0px;
     right: 0;
     top: 0;
+    width: 0px;
+    height: 100%;
     background: var(--color);
     height: 100px;
     transition: all .3s ease-in;
