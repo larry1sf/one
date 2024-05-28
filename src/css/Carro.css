@@ -44,7 +44,7 @@
     }
 
     &:checked~.carro-abrir .c-hijo {
-        animation: verSlide .7s both;
+        animation: verSlide .7s;
     }
 
     &:not(:checked)~.carro-abrir .c-hijo {
