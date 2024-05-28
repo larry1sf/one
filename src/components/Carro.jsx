@@ -29,7 +29,7 @@ export default function CarroBtn(prop) {
                     </label>
                 </div>
 
-                <VCarro />
+                {/* <VCarro /> */}
             </li ></>
     );
 }
