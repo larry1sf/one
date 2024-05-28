@@ -24,11 +24,8 @@ form {
 
 /* arreglar auto ajuste de la input. */
 .i-txt {
-    position: relative;
-    top: 1px;
     height: 100%;
-    width: 100%;
-    flex: 1 1 90%;
+    width: 120%;
     text-align: center;
     background-color: transparent;
     border: 0;
@@ -45,15 +42,22 @@ form {
         color: var(--color-a);
         font-size: 16px;
     }
+
+    &::before {
+        content: "...";
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+    }
 }
 
 
 
 .btn-label-txt {
     display: inline-block;
-    width: 100%;
+    width: 15%;
     height: 100%;
-    flex: 1 1 10%;
     background: url(../../public/svg/lupa.png) no-repeat 0 2px;
     background-size: 80% 80%;
     border: 0;
@@ -67,16 +71,19 @@ form {
     .i-txt {
 
 
-        flex: 1 1 80%;
 
         &::placeholder {
             font-size: 14px;
+            width: 105%;
         }
+
+
     }
 
     .btn-label-txt {
-        flex: 1 1 20%;
+        width: 22%;
+        /* flex: 1 1 20%;
         background-size: 40% 60%;
-        background-position: 15px 7px;
+        background-position: 15px 7px; */
     }
 }
