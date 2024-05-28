@@ -72,10 +72,6 @@
     text-wrap: nowrap;
 }
 
-.c-footer {
-    display: none;
-}
-
 .c-hijo {
     display: flex;
     flex-direction: column;
