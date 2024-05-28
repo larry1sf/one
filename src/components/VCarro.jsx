@@ -2,16 +2,16 @@
 
 export default function VCarro() {
     return (
-        <div className={`a-item-carro subContenedor`}>
+        <div className={`c-padre`}>
 
 
-            <div className={`a-item-carro carrito`}>
+            <div className={`c-hijo`}>
 
-                <div className="encabezado-car">
+                <div className="c-encabezado">
 
                     <h4 className="encabezado-car title">Carrito 🛒</h4>
 
-                    <label htmlFor="ch" className="encabezado-car lb-close">
+                    <label htmlFor="carro" className="encabezado-car lb-close">
                         <pre
                             className="btn-close-carro">
                             ❌
@@ -20,13 +20,13 @@ export default function VCarro() {
 
                 </div>
 
-                <div className="cuerpo-car">
+                <div className="c-cuerpo">
                     <p>Aqui se mostraran las comprar seleccionadas.</p>
                     <div>cards</div>
                     <div>cards</div>
                     <div>cards</div>
                 </div>
-                <div className="footer-car">
+                <div className="c-footer">
                     <button
                         type="button">
                         Comprar ahora

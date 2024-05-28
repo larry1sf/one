@@ -6,7 +6,7 @@ export default function TopItems() {
     return (
         <li className="NB-top-container-tops">
             <Item cname='msg' >
-                <Whatsapp />
+
                 Facebook: https://www.messenger.com/e2ee/t/7475012539220990
                 direccion: cr19#39-29
 
