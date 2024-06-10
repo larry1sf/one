@@ -40,7 +40,7 @@ function Item({ cname, children }) {
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
                 className={`NB-top-item ${cname}`}
-                onClick={() => setOpen(!open)}>
+            >
             </div >
 
             <div

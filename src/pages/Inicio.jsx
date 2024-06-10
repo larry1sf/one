@@ -7,6 +7,7 @@ import '../css/busqueda.css';
 import "../css/nav.css";
 import "../css/logo.css";
 import "../css/Carro.css";
+import "../css/itemsTop.css";
 
 function Inicio() {
 
