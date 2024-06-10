@@ -4,10 +4,9 @@ import TopItems from "../../components/TopItems";
 import { navegation } from "../../service/itemsNavegacon";
 import CarroBtn from "../../components/Carro";
 
+import { Route } from "wouter";
 
-export default function ViewSmall(props) {
-    const ViewInferior = props.Vinferior;
-    const espaciado = { name: '. . .', url: '/' };
+export default function ViewSmall() {
 
     return (
         <>
@@ -17,7 +16,7 @@ export default function ViewSmall(props) {
                 <ItemNav
                     ob={navegation.Home} />
 
-                <ItemNav ob={espaciado} />
+                <ItemNav ob={navegation.Mujer} />
 
                 <CarroBtn
                     ob={navegation.Carro} />
@@ -26,7 +25,10 @@ export default function ViewSmall(props) {
 
             </Nav>
 
-            {ViewInferior}
+            <Route path="/">casa</Route>
+            <Route path="/hombre">hombre</Route>
+            <Route path="/mujer">mujeres</Route>
+            <Route path="/promociones">promos</Route>
 
         </>
     );

@@ -8,6 +8,7 @@ import ViewNormal from "./responsive/ViewNormal";
 
 
 
+
 // inicial.
 function Home() {
 
@@ -17,7 +18,6 @@ function Home() {
 
 
     return (
-
 
 
         <>
