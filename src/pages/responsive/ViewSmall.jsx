@@ -5,18 +5,26 @@ import { navegation } from "../../service/itemsNavegacon";
 import CarroBtn from "../../components/Carro";
 
 import { Route } from "wouter";
+import { useState } from "react";
 
 export default function ViewSmall() {
 
+    const [active, setActive] = useState('home');
     return (
         <>
             <Nav>
                 <Logo />
 
                 <ItemNav
-                    ob={navegation.Home} />
+                    ob={navegation.Home}
+                    aState={active}
+                    aSetState={setActive} />
 
-                <ItemNav ob={navegation.Mujer} />
+                <ItemNav
+                    ob={navegation.Mujer}
+                    aState={active}
+                    aSetState={setActive}
+                />
 
                 <CarroBtn
                     ob={navegation.Carro} />
@@ -24,12 +32,14 @@ export default function ViewSmall() {
                 <TopItems></TopItems>
 
             </Nav>
+            <>
 
-            <Route path="/">casa</Route>
-            <Route path="/hombre">hombre</Route>
-            <Route path="/mujer">mujeres</Route>
-            <Route path="/promociones">promos</Route>
+                <Route path="/">casa</Route>
+                <Route path="/hombre">hombre</Route>
+                <Route path="/mujer">mujeres</Route>
+                <Route path="/promociones">promos</Route>
 
+            </>
         </>
     );
 }
