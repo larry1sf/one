@@ -1,35 +1,36 @@
 // library
 import { Link } from 'wouter';
 
-
 // hooks
 export default function ItemNav(props) {
     const nameProp = props.ob.name;
     const urlProp = props.ob.url;
-    const aClick = props.Aactive;
-    const aName = props.Averificar;
-    let nameMostrar = 'a';
+
+    const ASactive = props.aSetState;
+    const aState = props.aState;
+
+    let showActive = 'a';
 
 
-    if (aName === 'Hombre' & nameProp === aName) nameMostrar = 'on';
-    else if (aName === 'Home' & nameProp === aName) nameMostrar = 'on';
-    else if (aName === 'Mujer' & nameProp === aName) nameMostrar = 'on';
-    else if (aName === 'Promociones' & nameProp === aName) nameMostrar = 'on';
-    else nameMostrar = '';
-
+    if (aState === 'Hombre' & nameProp === aState) showActive = 'on';
+    else if (aState === 'Home' & nameProp === aState) showActive = 'on';
+    else if (aState === 'Mujer' & nameProp === aState) showActive = 'on';
+    else if (aState === 'Promociones' & nameProp === aState) showActive = 'on';
+    else showActive = '';
 
     return (
         <>
             <li className="navbar-item">
 
                 <Link
-                    className={`a-item ${nameProp} ${nameMostrar}`}
+                    className={`a-item ${nameProp} ${showActive}`}
                     to={urlProp}
                     alt={nameProp}
-                    onClick={aClick}>
+                    onClick={i => ASactive(i = nameProp, i)}>
+
                     <span
-                        className='txt-item'
-                    >
+
+                        className='txt-item'>
                         {nameProp}
                     </span>
                 </Link>

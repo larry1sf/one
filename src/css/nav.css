@@ -157,7 +157,7 @@
 
 @media(width <=1150px) {
     .navbar-menu {
-        grid-template-columns: 220px repeat(5, minmax(10px, 240px));
+        grid-template-columns: 200px repeat(5, minmax(10px, 240px));
     }
 
     /* .navbar-item {

@@ -2,7 +2,7 @@
     grid-row: 1/4;
     display: flex;
     min-width: 100%;
-    height: auto;
+    height: 80%;
     justify-content: center;
     align-items: end;
 }
@@ -10,10 +10,10 @@
 .img-container {
     display: flex;
     align-items: center;
-    background: url(/public/svg/dress.svg) 85% 45% no-repeat;
+    background: url(/public/svg/dress.svg) 98% 45% no-repeat;
     background-size: 60px;
-    height: 75%;
-    width: 100%;
+    height: 70%;
+    width: 80%;
     -webkit-user-select: none;
     user-select: none;
 }

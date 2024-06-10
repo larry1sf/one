@@ -17,7 +17,7 @@ form {
     min-width: 100%;
     border: 1px solid var(--color);
     border-radius: 20px 20px;
-    padding: 5px 5px 5px 10px;
+    padding: 5px;
 }
 
 .lb-busqueda {
@@ -33,6 +33,9 @@ form {
 .i-txt {
     height: 100%;
     width: 100%;
+    appearance: inherit;
+    padding-block: 0;
+    padding-inline: 0;
     background-color: transparent;
     text-align: center;
     font-family: var(--f-normal);
@@ -57,7 +60,7 @@ form {
 
 
 .btn-label-txt {
-    width: 17%;
+    min-width: 25px;
     height: 100%;
     background: url(../../public/svg/lupa.png) no-repeat 0 2px;
     background-size: 80% 80%;
@@ -68,18 +71,16 @@ form {
     }
 }
 
-@media (width <=985px) {
+@media (width <=1000px) {
+    .btn-label-txt {
+        /* width: 40px; */
+    }
+}
+
+@media (width <=950px) {
 
 
-    .i-txt {
-        &::after {
-            content: "a";
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            background-color: aqua;
-            visibility: visible;
-        }
-
+    .btn-label-txt {
+        /* width: 21%; */
     }
 }

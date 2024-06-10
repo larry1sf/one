@@ -1,4 +1,11 @@
+import { useMediaQuery } from "@react-hook/media-query";
+
 export default function Busqueda() {
+
+
+    const mediaHint = useMediaQuery('(max-width: 956px)');
+
+    const placeholder = mediaHint ? '¿Que Buscas?' : '¿Que Estas Buscando?';
     return (
         <li className="navbar-item busqueda">
             <form
@@ -15,7 +22,7 @@ export default function Busqueda() {
                         type="search"
                         autoComplete="off"
                         name="busqueda"
-                        placeholder="¿Que estas buscando?"
+                        placeholder={placeholder}
                         id="i-txt" />
                     <button
                         className="btn-label-txt"

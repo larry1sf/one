@@ -17,27 +17,29 @@ export default function Nav() {
             <nav className="navbar">
                 <ul className="navbar-menu">
 
-                    <Logo />
                     <Busqueda />
+                    <Logo
+                        aSetState={setActive}
+                    />
                     <ItemNav
                         ob={navegation.Home}
-                        Averificar={active}
-                        Aactive={i => setActive(i = navegation.Home.name, i)}
+                        aState={active}
+                        aSetState={setActive}
                     />
                     <ItemNav
                         ob={navegation.Hombre}
-                        Averificar={active}
-                        Aactive={i => setActive(i = navegation.Hombre.name, i)}
+                        aState={active}
+                        aSetState={setActive}
                     />
                     <ItemNav
                         ob={navegation.Mujer}
-                        Averificar={active}
-                        Aactive={i => setActive(i = navegation.Mujer.name, i)}
+                        aState={active}
+                        aSetState={setActive}
                     />
                     <ItemNav
                         ob={navegation.Prom}
-                        Averificar={active}
-                        Aactive={i => setActive(i = navegation.Prom.name, i)}
+                        aState={active}
+                        aSetState={setActive}
                     />
                     <CarroBtn
                         ob={navegation.Carro}
