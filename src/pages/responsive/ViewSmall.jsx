@@ -13,7 +13,7 @@ export default function ViewSmall() {
     return (
         <>
             <Nav>
-                <Logo />
+                <Logo aSetState={setActive} />
 
                 <ItemNav
                     ob={navegation.Home}
