@@ -1,7 +1,7 @@
 .NB-top-container-tops {
     z-index: 10;
     display: flex;
-    width: 100%;
+    width: 150%;
     justify-content: space-evenly;
     align-items: center;
     grid-column: 5/6;
@@ -11,7 +11,6 @@
 
 .NB-top-container {
     position: relative;
-
 }
 
 /* bg iconos top */
@@ -20,11 +19,9 @@
     width: 50px;
     height: 36px;
     display: flex;
-    /* background-color: var(--color); */
     border-radius: 45px 42px;
     border: 1px solid var(--color);
     box-shadow: 0px 0px 2px var(--color);
-
 
     /* transitiones... */
     &::before {
@@ -36,24 +33,11 @@
         cursor: pointer;
         filter: brightness(1.4);
         transition: all .1s ease-in-out;
-
-        +.NB-top-open {
-            position: absolute;
-            left: -120%;
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: start;
-            width: calc(var(--bg-size)*7);
-            height: calc(var(--bg-size)*4);
-            border: 1px solid var(--color-a);
-            border-radius: 3px;
-            background: var(--bg);
-        }
     }
 }
 
-
 /* estilos de el btn abierto*/
+.NB-top-item:hover+.NB-top-open,
 .NB-top-open {
     position: absolute;
     left: -120%;
@@ -61,17 +45,10 @@
     flex-direction: row-reverse;
     align-items: start;
     width: calc(var(--bg-size)*7);
-    height: calc(var(--bg-size)*4);
+    height: calc(var(--bg-size)*7);
     border: 1px solid var(--color-a);
     border-radius: 3px;
     background: var(--bg);
-    overflow: hidden;
-}
-
-.NB-top-open .btn-msg-close {
-    position: fixed;
-    /* top: 0; */
-    /* right: 0; */
 }
 
 /* estilos de el btn cerrado */
@@ -99,8 +76,106 @@
     }
 }
 
+.conte-top {
+    padding: 7px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(216, 216, 194);
+}
 
-@media(width <=756px) {
+.NB-top-open .btn-close {
+    background: transparent;
+    border: 0;
+    width: 10px;
+    height: 10px;
+    background: url(../../public/svg/close.svg) 0px no-repeat;
+    background-size: 100%;
+    transform: scale(2.8);
+    position: absolute;
+    top: 12px;
+    right: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.NB-top-open.bell .btn-close {
+    right: 15px;
+}
+
+.conte-top .title-top {
+    height: calc(var(--h-logo)*.43);
+    font-family: var(--f-normal);
+    font-size: 19px;
+    text-align: center;
+    padding-right: calc(var(--h-logo)*.1);
+}
+
+.NB-top-open.bell .conte-top .title-top {
+    padding-right: calc(var(--h-logo)*.40);
+}
+
+.conte-top .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.conte-top .card-top .bg-interno {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: url(../../public/svg/codeFail.svg);
+    background-repeat: no-repeat;
+    background-size: 65% 65%;
+    background-position: 60px;
+}
+
+.conte-top .card-top .bg-interno.facebook {
+    background: url(../../public/svg/facebook.svg) 150% no-repeat;
+    background-size: 65% 65%;
+}
+
+.conte-top .card-top.facebook {
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: var(--border);
+    border-top: 0;
+    background-color: #4460a0;
+}
+
+.conte-top .card-top .bg-interno.instagram {
+    background: url(../../public/svg/instagram.svg) 150% no-repeat;
+    background-size: 65% 65%;
+}
+
+.conte-top .card-top.instagram {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: var(--border);
+    border-bottom: 0;
+    background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.conte-top .card-top .bg-interno.whatsapp {
+    background: url(../../public/svg/whatsapp.svg) 150% no-repeat;
+    background-size: 65% 65%;
+}
+
+.conte-top .card-top.whatsapp {
+    border-right: var(--border);
+    border-left: var(--border);
+    background: linear-gradient(to right, #2BB741, #25D366);
+}
+
+@media(width <=730px) {
 
     .NB-top-container-tops {
         grid-column: 2/5;

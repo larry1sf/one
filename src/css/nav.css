@@ -7,7 +7,7 @@
     display: grid;
     justify-items: center;
     grid-template-columns: 240px repeat(5, minmax(10px, 240px));
-    grid-template-rows: 40px repeat(2, 35px);
+    grid-template-rows: repeat(2, 40px) 35px;
     padding: 10px 25px;
     /* box-shadow: 0 10px 58px rgb(0, 0, 0); */
     border-bottom: var(--border);

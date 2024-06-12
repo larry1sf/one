@@ -14,7 +14,7 @@ function Home() {
 
 
 
-    const isSmallView = useMediaQuery('(max-width: 756px)');
+    const isSmallView = useMediaQuery('(max-width: 730px)');
 
 
     return (

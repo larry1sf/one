@@ -1,37 +1,24 @@
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
+const titleItem = ["facebook", "whatsapp", "instagram"];
+const urlItem = ['https://www.facebook.com/profile.php?id=100085227097173', 'https://wa.link/rzld79', 'https://www.instagram.com/larrynigu6to/?hl=en'];
 export default function TopItems() {
-
-
     return (
         <li className="NB-top-container-tops">
-            <Item cname='msg' >
-
-                Facebook: https://www.messenger.com/e2ee/t/7475012539220990
-                direccion: cr19#39-29
-
+            <Item cname='msg' titleCard='Contactos'>
+                <CardItems nameUse={titleItem[0]} url={urlItem[0]} />
+                <CardItems nameUse={titleItem[1]} url={urlItem[1]} />
+                <CardItems nameUse={titleItem[2]} url={urlItem[2]} />
             </Item>
-            <Item cname='bell' > Notice</Item>
+
+            <Item cname='bell' titleCard='Notificaciones'></Item>
         </li>
     );
 }
 
-function Whatsapp() {
-    return (
-        <>
-            <figure>
-                <img src="../../public/svg/lupa.png" alt="Whatsapp-Empresa" />
-                <figcaption>Whatsapp-Empresa</figcaption>
-            </figure>
 
-        </>
-    );
 
-}
-function Item({ cname, children }) {
-    // const cname = props.cname;
+function Item({ children, cname, titleCard }) {
     const [open, setOpen] = useState(false);
-
 
     return (
 
@@ -40,6 +27,7 @@ function Item({ cname, children }) {
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
                 className={`NB-top-item ${cname}`}
+
             >
             </div >
 
@@ -48,37 +36,37 @@ function Item({ cname, children }) {
                 onMouseLeave={() => setOpen(false)}
                 className={`NB-top-open ${cname} ${open ? 'open' : 'closed'}`} >
 
-                <button
-                    type="button"
-                    className={`btn-${cname}-close`}
+                <div
+                    className={`btn-close`}
                     onClick={() => setOpen(false)}
                 >
-                    ❌
-                </button>
-                {children}
+
+                </div>
+
+                <div className="conte-top">
+                    <h5 className="title-top"> {titleCard}</h5>
+                    {children}
+                </div>
 
             </div >
         </div>
     );
 }
 
+function CardItems({ nameUse, url = urlItem }) {
+    return (
+        <>
+            <a className={`card-top ${nameUse}`}
+                target="_blank"
+                href={url}
+            >
 
+                <section className={`bg-interno ${nameUse}`}>
+                    <p> {nameUse} </p>
+                </section>
+            </a >
+        </>
+    );
 
-// function NewTopsItems(props) {
-//     // const [open, setOpen] = useState(false);
+}
 
-//     // const CNopen = open ? 'open' : 'close';
-//     return (<>
-//         <label className={`NB-top-item ${props.cname}`} htmlFor="msg-top-item">
-
-//             <div className={`NB-top-open-${props.cname} `}>
-
-//                 <div className={`btn-${props.cname}-close`}>
-//                     -x-
-//                 </div>
-//             </div>
-
-
-//         </label>
-//         <input type="radio" name="msgs-top-item" id="msg-top-item" />    </>);
-// }

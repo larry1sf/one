@@ -1,6 +1,6 @@
 .navbar-item.carro {
-    height: 45px;
-    width: 65px;
+    height: 40px;
+    width: 55px;
     grid-row: 2/3;
     grid-column: 6/7;
     border: 1px solid var(--color);
@@ -115,6 +115,6 @@
 
 @media (width <=756px) {
     .navbar-item.carro {
-        grid-column: 5/6;
+        grid-area: 2/6;
     }
 }

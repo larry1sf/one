@@ -2,9 +2,9 @@
     grid-row: 1/4;
     display: flex;
     min-width: 100%;
-    height: 80%;
+    height: 100%;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 }
 
 .img-container {
@@ -12,7 +12,7 @@
     align-items: center;
     background: url(/public/svg/dress.svg) 98% 45% no-repeat;
     background-size: 60px;
-    height: 70%;
+    height: 50%;
     width: 80%;
     -webkit-user-select: none;
     user-select: none;
@@ -37,27 +37,28 @@
 
 
     .logo-container {
-        min-width: 100%;
+        /* min-width: 100%; */
     }
 
     .img-container {
-        width: 100%;
+        /* width: 100%;
         height: 100%;
-        background-position: 105% 65%;
-        background-size: 55px;
+        background-position: 60% 60%;
+        background-size: 55px; */
     }
 
 
-    .logo-txt {
-        font-size: 19px;
+    /* .logo-txt {
+        font-size: 21px;
         width: 80px;
         height: auto;
         position: relative;
         top: 8px;
-    }
+    } */
 
-    .navbar-item .a-item {
+
+    /* .navbar-item .a-item {
         font-size: 15px;
-    }
+    } */
 
 }
