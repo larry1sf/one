@@ -3,8 +3,13 @@
     width: 55px;
     grid-row: 2/3;
     grid-column: 6/7;
-    border: 1px solid var(--color);
-    border-radius: 45px 45px;
+    transition: all 120ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+}
+
+.navbar-item.carro .a-item::after {
+    box-shadow: var(--color) 0px 0px 3.5px;
+    transition: all .24s ease 111ms;
 }
 
 /* label contenedor carro */
@@ -14,7 +19,6 @@
     justify-content: end;
     height: 100%;
     width: 100%;
-    padding-right: 10px;
     border-radius: 40px;
     background: url(../../public/svg/cart.svg) no-repeat 35% 60%;
     background-size: 50% 60%;
@@ -25,22 +29,13 @@
 
     &:hover {
         cursor: pointer;
-
-        /* quita el on de la navegation. */
-        &::after {
-            z-index: 10;
-            content: "sa";
-            visibility: hidden;
-        }
     }
-
-
 }
 
 .a-item.🛒 .txt-item {
     position: relative;
     top: -10px;
-    left: 0px;
+    left: -10px;
     display: flex;
     justify-content: center;
     align-items: center;

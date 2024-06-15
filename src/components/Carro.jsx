@@ -11,6 +11,8 @@ export default function CarroBtn(prop) {
         <>
             <li className="navbar-item carro">
                 <input type="checkbox" id="carro" />
+
+
                 <label
                     htmlFor="carro"
                     className={`a-item ${nameProp}`}
@@ -20,6 +22,8 @@ export default function CarroBtn(prop) {
                         {carElement}
                     </span>
                 </label>
+
+
                 <div className="carro-abrir">
                     <VCarro />
                 </div>

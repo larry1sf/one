@@ -15,9 +15,10 @@ form {
     display: flex;
     height: 100%;
     min-width: 100%;
-    border: 1px solid var(--color);
-    border-radius: 20px 20px;
+    border-radius: 20px;
+    border: .3px solid var(--color);
     padding: 5px;
+    /* box-shadow: var(--color) 0px 0px 3px; */
 }
 
 .lb-busqueda {
@@ -32,7 +33,7 @@ form {
 /* arreglar auto ajuste de la input. */
 .i-txt {
     height: 100%;
-    width: 100%;
+    width: 93.5%;
     appearance: inherit;
     padding-block: 0;
     padding-inline: 0;
@@ -63,7 +64,7 @@ form {
     min-width: 25px;
     height: 100%;
     background: url(../../public/svg/lupa.png) no-repeat 0 2px;
-    background-size: 80% 80%;
+    background-size: 80% 75%;
     border: 0;
 
     &:hover {

@@ -9,7 +9,6 @@
     grid-template-columns: 240px repeat(5, minmax(10px, 240px));
     grid-template-rows: repeat(2, 40px) 35px;
     padding: 10px 25px;
-    /* box-shadow: 0 10px 58px rgb(0, 0, 0); */
     border-bottom: var(--border);
     background: var(--bg);
 }
@@ -39,16 +38,24 @@
 
 }
 
-.navbar-item .a-item:hover::after,
-.navbar-item .a-item.on::before {
+.navbar-item .a-item::after,
+.navbar-item .a-item.on::after {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 0%;
     height: 2px;
     bottom: -1px;
     left: 0px;
-    background-color: var(--color-a);
+    background-color: var(--color);
+    transition: all .24s ease;
 }
+
+.navbar-item .a-item:hover::after,
+.navbar-item .a-item.on::after {
+    width: 100%;
+    transition: all .4s ease;
+}
+
 
 /* enlaces de navegacion responsive. */
 

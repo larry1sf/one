@@ -12,10 +12,10 @@ export default function VCarro() {
                     <h4 className="encabezado-car title">Carrito 🛒</h4>
 
                     <label htmlFor="carro" className="encabezado-car lb-close">
-                        <pre
-                            className="btn-close-carro">
-                            ❌
-                        </pre>
+                        <div
+                            className="btn-close">
+
+                        </div>
                     </label>
 
                 </div>

@@ -36,15 +36,16 @@ function Item({ children, cname, titleCard }) {
                 onMouseLeave={() => setOpen(false)}
                 className={`NB-top-open ${cname} ${open ? 'open' : 'closed'}`} >
 
-                <div
-                    className={`btn-close`}
-                    onClick={() => setOpen(false)}
-                >
 
-                </div>
-
-                <div className="conte-top">
+                <div className="conte-title-top">
                     <h5 className="title-top"> {titleCard}</h5>
+                    <div
+                        className={`btn-close`}
+                        onClick={() => setOpen(false)}
+                    >
+                    </div>
+                </div>
+                <div className="conte-top">
                     {children}
                 </div>
 
