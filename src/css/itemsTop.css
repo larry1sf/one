@@ -159,8 +159,6 @@
 }
 
 .conte-top .card-top.whatsapp {
-    /* border-right: var(--border); */
-    /* border-left: var(--border); */
     background: linear-gradient(to right, #2BB741, #25D366);
 }
 
