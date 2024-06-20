@@ -4,7 +4,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 import ItemNav from "./ItenNav";
 import TopItems from "./TopItems";
-import CarroBtn from "./Carro";
+import Carro from "./Carro";
 import Busqueda from "./Busqueda";
 
 export default function Nav() {
@@ -13,43 +13,46 @@ export default function Nav() {
 
 
     return (
-        <section className="conte-nav">
+        <article className="conte-nav">
             <nav className="navbar">
                 <ul className="navbar-menu">
 
                     <Busqueda />
+                    <TopItems></TopItems>
                     <Logo
-                        aSetState={setActive}
+                        ASactive={setActive}
                     />
                     <ItemNav
                         ob={navegation.Home}
                         aState={active}
-                        aSetState={setActive}
+                        ASactive={setActive}
                     />
                     <ItemNav
                         ob={navegation.Hombre}
                         aState={active}
-                        aSetState={setActive}
+                        ASactive={setActive}
                     />
                     <ItemNav
                         ob={navegation.Mujer}
                         aState={active}
-                        aSetState={setActive}
+                        ASactive={setActive}
                     />
                     <ItemNav
                         ob={navegation.Prom}
                         aState={active}
-                        aSetState={setActive}
+                        ASactive={setActive}
                     />
-                    <CarroBtn
+
+                    {/* cambiar de input a estado para hacer mas accesible papagina. */}
+
+                    <Carro
                         ob={navegation.Carro}
                     />
-                    <TopItems></TopItems>
 
                 </ul>
 
             </nav>
 
-        </ section>
+        </ article>
     );
 }

@@ -11,7 +11,7 @@
 
 }
 
-form {
+.navbar-item.busqueda form {
     display: flex;
     height: 100%;
     min-width: 100%;
@@ -21,17 +21,8 @@ form {
     /* box-shadow: var(--color) 0px 0px 3px; */
 }
 
-.lb-busqueda {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-
 /* arreglar auto ajuste de la input. */
-.i-txt {
+.navbar-item.busqueda form .i-txt {
     height: 100%;
     width: 93.5%;
     appearance: inherit;
@@ -58,13 +49,19 @@ form {
 
 }
 
-
-
-.btn-label-txt {
-    min-width: 25px;
+.lb-busqueda {
+    position: relative;
     height: 100%;
-    background: url(../../public/svg/lupa.png) no-repeat 0 2px;
-    background-size: 80% 75%;
+    min-width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.lb-busqueda .btn-label-txt {
+    width: 25px;
+    height: 100%;
+    background: url(../../public/svg/lupa.png) no-repeat 2px;
+    background-size: 80% 80%;
     border: 0;
 
     &:hover {

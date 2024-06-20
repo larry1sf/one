@@ -7,8 +7,10 @@ export default function Logo({ aSetState }) {
         <li className="logo-container">
 
             <Link
-                to="/"
                 className="img-container"
+                aria-label='logo de los modelos moncada'
+                alt='logo de la tienda virtual de modelos moncada'
+                to="/"
                 onClick={i => aSetState(i = 'Home', i)}>
 
                 <h1 className="logo-txt">

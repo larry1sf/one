@@ -7,6 +7,14 @@
 
 }
 
+.btn-a-item {
+    display: block;
+    width: 4rem;
+    height: 2rem;
+    background-color: transparent;
+    border: transparent;
+}
+
 .navbar-item.carro .a-item::after {
     box-shadow: var(--color) 0px 0px 3.5px;
     transition: all .24s ease 111ms;
@@ -48,17 +56,20 @@
     background-color: #e00;
 }
 
+/*  
+abir el carro
+*/
 /* items de carro abierto */
 #carro {
     display: none;
 
-    &:checked~.carro-abrir {
-        width: 30%;
+    &:checked~.carro-abrir .c-padre {
+        width: 39vw;
         height: 100%;
         transition: all .55s ease-in;
     }
 
-    &:checked~.carro-abrir .c-hijo {
+    &:checked~.carro-abrir .c-padre .c-hijo {
         animation: verSlide .67s;
     }
 
@@ -67,32 +78,177 @@
     }
 }
 
-.carro-abrir {
+.carro-abrir .c-padre {
     position: absolute;
     right: 0;
     top: 0;
     width: 0px;
-    height: 100%;
-    background: var(--color);
+    height: 100vh;
+    border-radius: var(--br);
+    background: var(--bg3);
     transition: all .20s ease-in-out;
     z-index: 20;
 }
 
-
-.carro-abrir .c-padre {}
-
-.c-hijo {
+.carro-abrir .c-padre .c-hijo {
+    position: relative;
     display: flex;
-    height: 100%;
-    margin: 30px 20px;
-    gap: 20px;
     flex-direction: column;
+    height: 100%;
+    padding: 25px 20px;
+    border-radius: var(--br);
     background: var(--bg);
+    box-shadow: var(--bg) 0px 0px 7px;
+    border: var(--color) .4px solid;
 }
 
-.c-encabezado {
+.c-padre .c-hijo .c-encabezado {
+    padding: 14px 5px 0px 5px;
+    display: grid;
+    height: 14vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2.4rem;
+    align-items: center;
+
+}
+
+.c-hijo .c-encabezado .c-encabezado-title {
+    font-size: 25px;
+    font-family: var(--f);
+    margin-top: 2.5px;
+    grid-column: 2/3;
+    grid-row: 1;
+    justify-self: center;
+}
+
+.c-hijo .c-encabezado .lb-close {
+    transform: scale(.5);
+    /* position: relative; */
+    height: 3rem;
+    width: 3rem;
+    grid-column: 3/4;
+    grid-row: 1;
+    justify-self: end;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.c-hijo .c-encabezado .btn-close {
+    z-index: -1;
+}
+
+.c-padre .c-hijo .c-encabezado hr {
+    background-color: var(--color);
+    width: 95%;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: end;
+}
+
+.c-hijo .c-cuerpo {
+    text-align: center;
+    height: 70vh;
+}
+
+.c-hijo .c-cuerpo .bienbenida {
+    padding: 2rem 0;
+    display: inline-block;
+
+}
+
+.c-hijo .c-cuerpo .cards {
+    height: 80%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 5%;
+    overflow-y: auto;
+}
+
+.c-hijo .c-cuerpo .cards .c-card {
+    display: inline-block;
+    height: 4rem;
+    width: 100%;
+    background: var(--bg2);
+    border: 2px solid var(--color);
+    border-radius: var(--br);
+}
+
+.c-hijo .c-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .c-hijo .c-footer .f-btn {
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--br)*5);
+    background: var(--bg2);
+    border: 0;
+
+
+    &:active {
+        box-shadow: #000 0 0 2px;
+    }
+} */
+.c-hijo .c-footer .custom-btn {
+    width: 100%;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px .5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.c-hijo .c-footer .custom-btn.btn {
+    background-color: var(--color);
+    background-image: linear-gradient(315deg, var(--color) 0%, var(--color) 74%);
+    border: none;
+    z-index: 1;
+}
+
+.btn:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: var(--btn);
+    background-image: linear-gradient(315deg, var(--btn) 0%, var(--btn) 74%);
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn:hover:after {
+    top: 0;
+    height: 100%;
+}
+
+.btn:active {
+    top: 2px;
 }
 
 @keyframes verSlide {

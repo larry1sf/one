@@ -16,6 +16,10 @@
   --color-a: #263159;
   --color: #682200;
   --bg: #E8E5C8;
+  --btn: #9c7152;
+  --bg2: #cebd9f;
+  --bg3: #dcd3b6;
+  --br: 4px;
 
   --h-logo: 70px;
   --f: title-stay;
@@ -56,7 +60,20 @@ body {
 
 
 
+.btn-close {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: url(../../public/svg/close.svg) 0px no-repeat;
+  background-size: 100%;
+  transform: scale(1);
+  position: relative;
 
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 
 

@@ -11,24 +11,24 @@ export default function Busqueda() {
             <form
                 action="/search/"
                 method="get">
+                <input
+                    id="i-txt"
+                    className="i-txt"
+                    type="search"
+                    autoComplete="off"
+                    name="busqueda"
+                    title="¿Que estas buscando?"
+                    placeholder="¿Que estas buscando?"
+                    aria-label="Area de busqueda"
+                />
                 <label
                     htmlFor="i-txt"
                     className="lb-busqueda"
-                    title="¿Que estas buscando?"
-                    aria-disabled="true"
-                >
-                    <input
-                        className="i-txt"
-                        type="search"
-                        autoComplete="off"
-                        name="busqueda"
-                        placeholder="¿Que estas buscando?"
-                        id="i-txt" />
+                    title="¿Que estas buscando?">
                     <button
                         className="btn-label-txt"
                         type="submit"
-                        aria-label='Buscar'
-                        aria-disabled={true} />
+                        aria-label='Boton de busqueda' />
 
                 </label>
             </form>

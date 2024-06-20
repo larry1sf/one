@@ -1,12 +1,12 @@
 .NB-top-container-tops {
     z-index: 10;
     display: flex;
-    width: 150%;
-    justify-content: space-evenly;
+    width: 80%;
+    justify-content: space-around;
     align-items: center;
     grid-column: 5/6;
     grid-row: 1/2;
-    gap: 15%;
+    gap: 5%;
 }
 
 .NB-top-container {
@@ -15,15 +15,11 @@
 
 /* bg iconos top */
 .NB-top-item {
-    width: 36px;
-    height: 36px;
+    width: 4rem;
+    height: 2rem;
     display: flex;
-
-    /* transitiones... */
-    &::before {
-        transition: all 3ms ease-in-out;
-    }
-
+    background: transparent;
+    border: 0 transparent;
 
 
     /* hovers */
@@ -38,14 +34,14 @@
 .NB-top-item:hover+.NB-top-open,
 .NB-top-open {
     position: absolute;
-    left: -200%;
+    left: -85%;
     display: flex;
     flex-direction: column;
     width: calc(var(--bg-size)*7);
     height: auto;
     border: 1px solid var(--color);
     border-radius: 3px;
-    background: var(--bg);
+    background: var(--bg3);
 }
 
 /* estilos de el btn cerrado */
@@ -54,57 +50,51 @@
 }
 
 /* bg imagenes bell*/
-.NB-top-item.bell {
-    &::before {
-        content: "";
-        width: 100%;
-        background: url(../../public/svg/bell.svg) 45% no-repeat;
-        background-size: var(--bg-size);
-    }
+.NB-top-item.campana {
+    background: url(../../public/svg/bell.svg) 45% no-repeat;
+    background-size: var(--bg-size);
 }
 
 /* bg imagenes msg*/
-.NB-top-item.msg {
-    &::before {
-        content: "";
-        width: 100%;
-        background: url(../../public/svg/contact.svg) 45% no-repeat;
-        background-size: var(--bg-size);
-    }
+.NB-top-item.mensajes {
+    background: url(../../public/svg/contact.svg) 45% no-repeat;
+    background-size: var(--bg-size);
 }
 
 .conte-title-top {
-    display: flex;
     height: calc(var(--h-logo)*.43);
-    justify-content: center;
-    align-items: center;
     font-family: var(--f-normal);
     font-size: 21px;
-    background-color: rgb(216, 216, 194);
-    padding-right: 7%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5%;
 }
 
-.btn-close {
-    background: transparent;
-    border: 0;
-    width: 10px;
-    height: 10px;
-    background: url(../../public/svg/close.svg) 0px no-repeat;
-    background-size: 100%;
-    transform: scale(1.7);
-    position: absolute;
-    right: 7%;
+.conte-title-top .title-top {
+    justify-self: center;
+    grid-column: 1/-1;
+    grid-row: 1;
+}
 
-    &:hover {
-        cursor: pointer;
-    }
+
+.NB-top-container .btn-close {
+    background: transparent;
+    width: 1rem;
+    height: 100%;
+    border: 0;
+    background: url(../../public/svg/close.svg) 0px .1px no-repeat;
+    background-size: 100%;
+    transform: scale(.9);
+    grid-column: 3/4;
+    grid-row: 1;
+    justify-self: end;
 }
 
 .conte-top {
     padding: 7px 7px;
     width: 100%;
     height: auto;
-    background-color: rgb(216, 216, 194);
+    /* background-color: var(--bg2) */
 }
 
 .conte-top .card-top {
@@ -182,8 +172,8 @@
             height: 30px;
         }
 
-        .NB-top-item.msg::before,
-        .NB-top-item.bell::before {
+        .NB-top-item.mensajes::before,
+        .NB-top-item.campana::before {
             background-size: calc(var(--bg-size)*.85);
         }
 

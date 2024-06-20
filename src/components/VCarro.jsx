@@ -1,6 +1,6 @@
 
 
-export default function VCarro() {
+export default function VCarro({ titleCar, children }) {
     return (
         <div className={`c-padre`}>
 
@@ -8,33 +8,37 @@ export default function VCarro() {
             <div className={`c-hijo`}>
 
                 <div className="c-encabezado">
+                    <cite className="c-encabezado-title">{titleCar}</cite>
 
-                    <h4 className="encabezado-car title">Carrito 🛒</h4>
-
-                    <label htmlFor="carro" className="encabezado-car lb-close">
-                        <div
-                            className="btn-close">
-
-                        </div>
+                    <label htmlFor="carro" className="lb-close">
+                        <button type="button" aria-label='boton de cerrar' className="btn-close" ></button>
                     </label>
-
+                    <hr />
                 </div>
 
                 <div className="c-cuerpo">
-                    <p>Aqui se mostraran las comprar seleccionadas.</p>
-                    <div>cards</div>
-                    <div>cards</div>
-                    <div>cards</div>
+                    <p className="bienbenida">¡Productos a bordo!</p>
+
+                    <div className="cards">
+
+                        {children}
+                    </div>
+
                 </div>
+
                 <div className="c-footer">
-                    <button
-                        type="button">
+                    {/* <button
+                        type="button"
+                        className="f-btn">
                         Comprar ahora
                     </button>
                     <button
-                        type="button">
+                        type="button"
+                        className="f-btn">
                         Comprar despues.
-                    </button>
+                    </button> */}
+                    <button className="custom-btn btn">Comprar Ahora</button>
+                    <button className="custom-btn btn">Comprar Despues</button>
                 </div>
 
             </div>
