@@ -1,11 +1,13 @@
 .login-container {
+    position: relative;
     height: 30px;
+    width: 100vw;
     background-color: var(--color);
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 20px;
-    padding: 5px;
+    padding: 5px 25px;
     color: var(--bg);
 }
 
@@ -15,7 +17,6 @@
     align-items: center;
     font-size: 13.5px;
     color: var(--bg);
-
 }
 
 .I {
@@ -40,5 +41,11 @@
             background-size: 15px;
         }
 
+    }
+}
+
+@media (width<100vw) {
+    .login-container {
+        padding: 5px 20px
     }
 }

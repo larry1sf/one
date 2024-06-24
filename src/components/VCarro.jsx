@@ -16,8 +16,8 @@ export default function VCarro({ titleCar, children }) {
                     <hr />
                 </div>
 
+                <p className="bienbenida">¡Productos a bordo!</p>
                 <div className="c-cuerpo">
-                    <p className="bienbenida">¡Productos a bordo!</p>
 
                     <div className="cards">
 

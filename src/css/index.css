@@ -15,10 +15,11 @@
 
   --color-a: #263159;
   --color: #682200;
+  /* --color-acent: */
   --bg: #E8E5C8;
   --btn: #9c7152;
   --bg2: #cebd9f;
-  --bg3: #dcd3b6;
+  --bg3: #872C00;
   --br: 4px;
 
   --h-logo: 70px;
@@ -48,13 +49,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
   min-width: 100vw;
-  /* min-height: 100vh; */
   background-color: var(--bg);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+
 }
 
 

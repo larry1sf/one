@@ -21,15 +21,15 @@ export default function Carro(prop) {
                         className={`a-item ${nameProp}`}
                     >
 
-                        <strong className='txt-item'>{carElement}</strong>
+                        <p className='txt-item'>{carElement}</p>
                     </label>
                 </button>
 
                 <section className="carro-abrir">
                     <VCarro titleCar='Carro'>
-                        <CardsC clsName='c-card' nmProduct={cCards.titleItem[0]} url={cCards.urlItem[0]} />
-                        <CardsC clsName='c-card' nmProduct={cCards.titleItem[1]} url={cCards.urlItem[1]} />
-                        <CardsC clsName='c-card' nmProduct={cCards.titleItem[2]} url={cCards.urlItem[2]} />
+                        <CardsC clsName='c-card' nmProduct={cCards.titleItem[0]} />
+                        <CardsC clsName='c-card' nmProduct={cCards.titleItem[1]} />
+                        <CardsC clsName='c-card' nmProduct={cCards.titleItem[0]} />
                     </VCarro>
                 </section>
 

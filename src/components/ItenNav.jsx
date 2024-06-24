@@ -31,10 +31,10 @@ export default function ItemNav({ ob, ASactive, aState, ariaLb = 'nuestro estant
                     alt={nameProp}
                     onClick={i => ASactive(i = nameProp, i)}>
 
-                    <strong
+                    <span
                         className='txt-item'>
                         {nameProp}
-                    </strong>
+                    </span>
                 </Link>
 
             </li >

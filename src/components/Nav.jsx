@@ -18,35 +18,11 @@ export default function Nav() {
                 <ul className="navbar-menu">
 
                     <Busqueda />
-                    <TopItems></TopItems>
-                    <Logo
-                        ASactive={setActive}
-                    />
-                    <ItemNav
-                        ob={navegation.Home}
-                        aState={active}
-                        ASactive={setActive}
-                    />
-                    <ItemNav
-                        ob={navegation.Hombre}
-                        aState={active}
-                        ASactive={setActive}
-                    />
-                    <ItemNav
-                        ob={navegation.Mujer}
-                        aState={active}
-                        ASactive={setActive}
-                    />
-                    <ItemNav
-                        ob={navegation.Prom}
-                        aState={active}
-                        ASactive={setActive}
-                    />
-
-                    {/* cambiar de input a estado para hacer mas accesible papagina. */}
-
+                    <TopItems />
+                    <Logo ASactive={setActive} />
+                    <MiniNav a={active} sA={setActive} />
                     <Carro
-                        ob={navegation.Carro}
+                        ob={navegation.Carro}// cambiar de input a estado para hacer mas accesible papagina.
                     />
 
                 </ul>
@@ -54,5 +30,32 @@ export default function Nav() {
             </nav>
 
         </ article>
+    );
+}
+function MiniNav({ a, sA }) {
+    return (
+        <>
+
+            <ItemNav
+                ob={navegation.Home}
+                aState={a}
+                ASactive={sA}
+            />
+            <ItemNav
+                ob={navegation.Hombre}
+                aState={a}
+                ASactive={sA}
+            />
+            <ItemNav
+                ob={navegation.Mujer}
+                aState={a}
+                ASactive={sA}
+            />
+            <ItemNav
+                ob={navegation.Prom}
+                aState={a}
+                ASactive={sA}
+            />
+        </>
     );
 }
