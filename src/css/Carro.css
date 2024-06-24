@@ -94,15 +94,17 @@ abir el carro
 
 .carro-abrir .c-padre .c-hijo {
     position: relative;
-    height: 100%;
+    height: 85%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 25px 20px;
+    padding: 25px 20px 0 20px;
     border-radius: var(--br);
     background: var(--bg);
     box-shadow: var(--bg) 0px 0px 7px;
     border: var(--color) .4px solid;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .c-padre .c-hijo .c-encabezado {
@@ -350,14 +352,18 @@ abir el carro
     }
 }
 
-.c-hijo .c-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 25vh;
+.c-footer {
+    padding: 2.5px 0;
     display: flex;
+    height: 15%;
     justify-content: center;
     align-items: center;
+    border-radius: var(--br);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: var(--bg2);
+    border: 1px solid var(--color);
+    border-top: 0px solid transparent;
 }
 
 /* .c-hijo .c-footer .f-btn {
@@ -372,61 +378,76 @@ abir el carro
         box-shadow: #000 0 0 2px;
     }
 } */
-.c-hijo .c-footer .custom-btn {
+.desc-compras {
+    width: 66%;
+    display: grid;
+    align-items: center;
+    padding: 9%;
+}
+
+.desc-compras hr {
     width: 100%;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px .5rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
+    border: .5px solid var(--color);
+    /* background-color: var(--color); */
 }
 
-.c-hijo .c-footer .custom-btn.btn {
-    background-color: var(--color);
-    background-image: linear-gradient(315deg, var(--color) 0%, var(--color) 74%);
-    border: none;
-    z-index: 1;
-}
-
-.btn:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 5px;
-    background-color: var(--btn);
-    background-image: linear-gradient(315deg, var(--btn) 0%, var(--btn) 74%);
-    box-shadow:
-        -7px -7px 20px 0px #fff9,
-        -4px -4px 5px 0px #fff9,
-        7px 7px 20px 0px #0002,
-        4px 4px 5px 0px #0001;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    color: #fff;
-}
-
-.btn:hover:after {
-    top: 0;
+.botones {
     height: 100%;
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.btn:active {
-    top: 2px;
+.c-footer .custom-btn {
+    height: 2rem;
+    cursor: pointer;
+    position: relative;
+    /* padding: 10px 20px; */
+    background: transparent;
+    font-size: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all .7s;
+
+    &:after,
+    &:before {
+        content: " ";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        border: 0px solid #fff;
+        transition: all 1s;
+    }
+
+    &:after {
+        top: -1px;
+        left: -1px;
+        border-top: 4px solid black;
+        border-left: 4px solid black;
+    }
+
+    &:before {
+        bottom: -1px;
+        right: -1px;
+        border-bottom: 4px solid var(--bg3);
+        border-right: 4px solid black;
+    }
+
+    &:hover {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+
+        /* // background:rgba(0,0,0,.5); */
+        /* // color:white; */
+        &:before,
+        &:after {
+
+            width: 100%;
+            height: 100%;
+            /* // border-color:white; */
+        }
+    }
 }
 
 @keyframes verSlide {

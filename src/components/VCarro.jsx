@@ -25,9 +25,10 @@ export default function VCarro({ titleCar, children }) {
                     </div>
 
                 </div>
+            </div>
 
-                <div className="c-footer">
-                    {/* <button
+            <div className="c-footer">
+                {/* <button
                         type="button"
                         className="f-btn">
                         Comprar ahora
@@ -37,11 +38,20 @@ export default function VCarro({ titleCar, children }) {
                         className="f-btn">
                         Comprar despues.
                     </button> */}
+
+                <div className="desc-compras">
+                    <p className="num-productos">N° de productos: $300033</p>
+                    <hr />
+                    <p className="total-estimado">Total estimado: $3333</p>
+                </div>
+
+                <div className="botones">
                     <button className="custom-btn btn">Comprar Ahora</button>
                     <button className="custom-btn btn">Comprar Despues</button>
                 </div>
-
             </div>
+
+
 
         </div >
     );
