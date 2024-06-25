@@ -1,10 +1,16 @@
-import { Link } from "wouter";
 
-export default function BtnSalir() {
+export default function BtnSalir({ cambio, pV, sV, ECambiar }) {
+    // let card = '';
     return (
 
-        <div>
-            <Link to="/" title="Pagina de inicio" style={{ padding: "20px " }}>Volver</Link>
-        </div>
+        <>
+            <button
+                className="btn-close"
+                type="button"
+                title="boton de cierre"
+                aria-label='boton de cerrar'
+                onClick={() => cambio({ pV: false, sV: ECambiar.sV })}
+            ></button >
+        </>
     );
 }

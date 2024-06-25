@@ -1,6 +1,47 @@
-
+import { Link } from "wouter";
+import BtnSalir from "./BtnSalir";
 
 export default function VCarro({ titleCar, children }) {
+
+
+
+    function BtnCompra({ urlC, text }) {
+        return (
+            <>
+                <Link className=" btn"
+                    href={urlC} >
+                    <div className="btn-span">
+                        {text}
+                    </div>
+                </Link>
+            </>
+        );
+    }
+    function DescCompra({ cname = 'desc-compras' }) {
+        return (
+            <>
+
+                <p className="num-productos">N° de productos: $300033</p>
+                <hr />
+                <p className="total-estimado">Total estimado: $3333</p>
+
+
+            </>
+        );
+    }
+    function Encabezado() {
+        return (
+            <>
+                <cite className="c-encabezado-title">{titleCar}</cite>
+
+                <label htmlFor="carro" className="lb-close">
+                    <BtnSalir />
+                </label>
+                <hr />
+            </>
+        );
+    }
+
     return (
         <div className={`c-padre`}>
 
@@ -8,51 +49,37 @@ export default function VCarro({ titleCar, children }) {
             <div className={`c-hijo`}>
 
                 <div className="c-encabezado">
-                    <cite className="c-encabezado-title">{titleCar}</cite>
-
-                    <label htmlFor="carro" className="lb-close">
-                        <button type="button" aria-label='boton de cerrar' className="btn-close" ></button>
-                    </label>
-                    <hr />
+                    <Encabezado />
                 </div>
 
                 <p className="bienbenida">¡Productos a bordo!</p>
+
                 <div className="c-cuerpo">
 
                     <div className="cards">
-
                         {children}
                     </div>
 
                 </div>
+
             </div>
 
             <div className="c-footer">
-                {/* <button
-                        type="button"
-                        className="f-btn">
-                        Comprar ahora
-                    </button>
-                    <button
-                        type="button"
-                        className="f-btn">
-                        Comprar despues.
-                    </button> */}
-
                 <div className="desc-compras">
-                    <p className="num-productos">N° de productos: $300033</p>
-                    <hr />
-                    <p className="total-estimado">Total estimado: $3333</p>
+                    <DescCompra />
                 </div>
 
                 <div className="botones">
-                    <button className="custom-btn btn">Comprar Ahora</button>
-                    <button className="custom-btn btn">Comprar Despues</button>
+                    <BtnCompra urlC={'comprar-page'} text='Comprar Ahora' />
+                    <BtnCompra urlC='home' text='Comprar Despues' />
                 </div>
             </div>
 
-
-
         </div >
     );
+
+
+
 }
+
+
