@@ -5,13 +5,7 @@ export default function Mujer() {
     return (
         <div className="mujeresPage">
 
-            <div style={{
-                display: "flex",
-                justifyContent: "center",
-                alignContent: "center",
-                padding: "50px",
-                color: "pink"
-            }}>
+            <div >
                 Productos para mujeres en este lado
 
                 <BtnSalir></BtnSalir>

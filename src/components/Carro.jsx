@@ -16,13 +16,17 @@ export default function Carro(prop) {
             <li className="navbar-item carro" >
                 <input type="checkbox" id="carro" />
 
-                <button className="btn-a-item"
+                <button
+                    className="btn-a-item"
                     type="button"
                     aria-label="boton de abrir carro de comprar">
 
-                    <label className={`a-item ${nameProp}`}
+                    <label
+                        className={`a-item ${nameProp}`}
                         htmlFor="carro">
+
                         <p className='txt-item'>{carElement}</p>
+
                     </label>
 
                 </button>

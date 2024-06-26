@@ -13,7 +13,9 @@ export default function TopItems() {
                 <CardsT nmUse={cCards.titleItem[2]} clsName='card-top' url={cCards.urlItem[2]} />
             </Item>
 
-            <Item cname='campana' titleItem='Notificaciones'></Item>
+            <Item cname='campana' titleItem='Notificaciones'>
+                mensajes
+            </Item>
         </li>
     );
 }
@@ -50,6 +52,7 @@ function Item({ children, cname, titleItem }) {
                         onClick={() => setOpen(false)}>
                     </button>
                 </div>
+
                 <div className="conte-top">
                     {children}
                 </div>

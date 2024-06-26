@@ -1,13 +1,19 @@
 @font-face {
   font-family: title-stay;
+  font-style: normal;
+  font-weight: normal;
   src: url(../../public/font/Kenlan.ttf);
+  font-display: swap;
 }
 
 
 
 @font-face {
   font-family: normal-stay;
+  font-style: normal;
+  font-weight: normal;
   src: url(../../public/font/Scintilla.otf);
+  font-display: swap;
 }
 
 

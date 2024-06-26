@@ -22,9 +22,7 @@ function Home() {
 
         <>
             {
-                isSmallView ? (
-                    <ViewSmall />
-                ) : <ViewNormal />
+                isSmallView ? <ViewSmall /> : <ViewNormal />
             }
         </>
     );
