@@ -1,6 +1,6 @@
 # Moncada Models.
 
-- un proyecto para ir a cogiéndome a react más que todo
+# un proyecto para ir a cogiéndome a react más que todo
  - vimos cosas como:
  - estados
  - usar propsnparra pasar
