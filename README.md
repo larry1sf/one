@@ -1,7 +1,7 @@
 # Moncada Models.
 
-- # un proyecto para ir a cogiéndome a react más que todo
- - # vimos cosas como:
+- un proyecto para ir a cogiéndome a react más que todo
+ - vimos cosas como:
  - estados
  - usar propsnparra pasar
 - [corchetes.](https://babeljs.io/) for Fast Refresh.
