@@ -6,4 +6,4 @@
 
 - [enlace a la direccion de parentesis.](https://github.com/larry1sf/one/) es un texto normal 
 
--palavrss
+- palavrss
