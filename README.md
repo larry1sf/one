@@ -3,7 +3,7 @@
 # un proyecto para ir a cogiéndome a react más que todo
  - vimos cosas como:
  - estados
- - usar propsnparra pasar
+ - usar props para pasar
 - [corchetes.](https://babeljs.io/) for Fast Refresh.
 
 # probando un podo de md como lenguaje:
